@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <title>Contacts</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <img class="logo__img" src="img/logo.svg" alt="Логотип">
+                <p class="logo__title">Стоматологическая клиника</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="">Главная</a></li>
+                    <li class="nav__list-item"><a href="">Услуги</a></li>
+                    <li class="nav__list-item"><a href="">Врачи</a></li>
+                    <li class="nav__list-item"><a href="">Отзывы</a></li>
+                    <li class="nav__list-item"><a href="">Лицензии</a></li>
+                    <li class="nav__list-item"><a href="">О клинике</a></li>
+                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contacts">
+        <div id="map" class="contacts__map"></div>
+        <div class="container">
+            <div class="contacts__block">
+                <h3 class="contacts__h3">Контакты</h3>
+                <address class="contacts__address">
+                    г. Коломна, ул. Октябрьской революции д. 161
+                </address>
+                <div class="contacts__route">
+                    <a class="contacts__route-text" href="">Проложить маршрут</a>
+                    <img src="img/contacts/icon-mark.svg" alt="Метка местоположения" class="contacts__route-img">
+                </div>
+                <div class="contacts__time">
+                    <p class="contacts__time-text">
+                        с 9:00 до 21:00 <span>последняя запись до 19:00</span>
+                    </p>
+                </div>
+                <div class="contacts__phone">
+                    +7 (496) 614-15-15
+                    +7 (926) 025-57-67
+                    +7 (985) 025-55-66
+                </div>
+                <div class="contacts__messenger">
+                    <div class="contacts__messenger-icon">
+                        <img src="img/telegram.svg" alt="Иконка телеграмма">
+                        <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                    </div>
+                    <p class="contacts__messenger-text">спросить в мессенджере</p>
+                </div>
+                <div class="contacts__social">
+                    <img src="img/VK.svg" alt="Иконка Вконтакте">
+                    <p class="contacts__social-text">Наша круппа в ВКонтакте</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__left">
+                <div class="logo">
+                    <img class="logo__img" src="img/logo.svg" alt="Логотип">
+                    <p class="logo__title">Стоматологическая клиника</p>
+                </div>
+                <address class="address">
+                    <div class="address__top">
+                        <img src="img/location.svg" alt="Иконка адреса">
+                        <p class="address__title">Адрес</p>
+                    </div>
+                    <div class="address__bottom">
+                        <p class="address__text">
+                            г. Коломна, ул. Октябрьской революции д. 161
+                        </p>
+                    </div>
+                </address>
+                <div class="work-time">
+                    <div class="work-time__top">
+                        <img src="img/clock.svg" alt="Иконка часов">
+                        <p class="work-time__title">Время работы</p>
+                    </div>
+                    <div class="work-time__bottom">
+                        <p class="work-time__text">
+                            Работаем без выходных с 9:00 до 21:00
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="social-network">
+                    <img src="img/telegram.svg" alt="Иконка адреса">
+                    <img src="img/whatsapp.svg" alt="Иконка адреса">
+                </div>
+                <div class="phone">
+                    <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
+                    <a href="tel:+79260255767" class="phone__number">+7 (926) 025-57-67</a>
+                    <a href="" class="phone__feedback">Перезвоните мне</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5703c528-fb4a-4c0a-a0b1-23d68ed92a66&lang=ru_RU"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
