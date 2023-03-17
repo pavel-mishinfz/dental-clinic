@@ -20,14 +20,19 @@
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
             <nav class="nav">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="">Главная</a></li>
-                    <li class="nav__list-item"><a href="">Услуги</a></li>
-                    <li class="nav__list-item"><a href="">Врачи</a></li>
-                    <li class="nav__list-item"><a href="">Отзывы</a></li>
-                    <li class="nav__list-item"><a href="">Лицензии</a></li>
-                    <li class="nav__list-item"><a href="">О клинике</a></li>
-                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                    <li class="nav__list-item"><a href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a href="service.html">Услуги</a></li>
+                    <li class="nav__list-item"><a href="doctors.html">Врачи</a></li>
+                    <li class="nav__list-item"><a href="about.html">О клинике</a></li>
+                    <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,7 +49,7 @@
             </div>
 
             <div class="doctors__wrap">
-                <div class="doctors__left">
+                <ul class="doctors__left owl-dots">
                     <div class="doctors__preview">
                         <p class="doctors__preview-name">
                             Саидов Шамсулло Нарзуллоевич
@@ -66,7 +71,7 @@
                         </div>
                     </div>
                     <div class="doctors__preview">
-                         <p class="doctors__preview-name">
+                        <p class="doctors__preview-name">
                             Варданян Давид Араевич
                         </p>
                         <div class="doctors__preview-desc">
@@ -96,7 +101,7 @@
                         </div>
                     </div>
                     <div class="doctors__preview">
-                         <p class="doctors__preview-name">
+                        <p class="doctors__preview-name">
                             Синельщикова Елена Дмитриевна
                         </p>
                         <div class="doctors__preview-desc">
@@ -105,10 +110,10 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </ul>
                 <div class="doctors__right">
                     <div class="doctors__wrap-slider">
-                        <div class="doctors__slider owl-carousel owl-theme">
+                        <div id="doctors__slider-id" class="doctors__slider owl-carousel owl-theme">
                             <div class="doctors__slider-item item">
                                 <img class="doctors__img" src="img/doctors/person-1.png"
                                     alt="Саидов Шамсулло Нарзуллоевич">
@@ -266,8 +271,8 @@
             <div class="doctors__wrap-messenger">
                 <div class="doctors__messenger">
                     <div class="doctors__messenger-icon">
-                        <img src="img/telegram.svg" alt="Иконка телеграмма">
-                        <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                        <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                        <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                     </div>
                     <p class="doctors__messenger-text">спросить в мессенджере</p>
                 </div>
@@ -277,24 +282,26 @@
                     Выбрав, интересующую вас услугу, <span>наш электронный помощник</span>, поможет вам быстро подобрать
                     нужного специалиста
                 </h3>
-                <div class="helpers__list">
-                    <div class="helpers__list-item helpers__list-item--surgery">
-                        <h4 class="helpers__h4">Хирургия</h4>
-                    </div>
-                    <div class="helpers__list-item helpers__list-item--therapy">
-                        <h4 class="helpers__h4">Терапия</h4>
-                    </div>
-                    <div class="helpers__list-item helpers__list-item--orthopedics">
-                        <h4 class="helpers__h4">Ортопедия</h4>
-                    </div>
-                    <div class="helpers__list-item helpers__list-item--Implantation">
-                        <h4 class="helpers__h4">Имплантация</h4>
-                    </div>
-                    <div class="helpers__list-item helpers__list-item--orthodontics">
-                        <h4 class="helpers__h4">Ортодонтия</h4>
-                    </div>
-                    <div class="helpers__list-item helpers__list-item--bleaching">
-                        <h4 class="helpers__h4">Отбеливание</h4>
+                <div class="helpers__wrap-list">
+                    <div class="helpers__list">
+                        <div class="helpers__list-item helpers__list-item--surgery">
+                            <h4 class="helpers__h4">Хирургия</h4>
+                        </div>
+                        <div class="helpers__list-item helpers__list-item--therapy">
+                            <h4 class="helpers__h4">Терапия</h4>
+                        </div>
+                        <div class="helpers__list-item helpers__list-item--orthopedics">
+                            <h4 class="helpers__h4">Ортопедия</h4>
+                        </div>
+                        <div class="helpers__list-item helpers__list-item--Implantation">
+                            <h4 class="helpers__h4">Имплантация</h4>
+                        </div>
+                        <div class="helpers__list-item helpers__list-item--orthodontics">
+                            <h4 class="helpers__h4">Ортодонтия</h4>
+                        </div>
+                        <div class="helpers__list-item helpers__list-item--bleaching">
+                            <h4 class="helpers__h4">Отбеливание</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,103 +318,111 @@
                 Выберите врача который вам подходит и кликните на его фото:
             </p>
             <div class="popup__grid">
-                <div class="popup__grid-item">
-                    <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
-                    <div class="popup__info">
-                        <p class="popup__info-name">
-                            Саидов Шамсулло Нарзуллоевич
-                        </p>
-                        <p class="popup__info-specialization">
-                            Врач-стоматолог
-                            <span>Ведущий специалист</span>
-                        </p>
-                    </div>
-                    <div class="popup__desc">
-                        <p class="popup__desc-title">
-                            Опыт работы более 25 лет
-                        </p>
-                        <div class="popup__desc-text">
-                            <span>Действующие сертификаты:</span>
-                            стоматология ортопедическая;
-                            стоматология хирургическая <br>
-                            <span>Все виды высококачественного протезирования:</span> съемные,
-                            несъемные, безметалловые конструкции, цирконий, проте-
-                            зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__grid-item">
+                        <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <div class="popup__info">
+                            <p class="popup__info-name">
+                                Саидов Шамсулло Нарзуллоевич
+                            </p>
+                            <p class="popup__info-specialization">
+                                Врач-стоматолог
+                                <span>Ведущий специалист</span>
+                            </p>
+                        </div>
+                        <div class="popup__desc">
+                            <p class="popup__desc-title">
+                                Опыт работы более 25 лет
+                            </p>
+                            <div class="popup__desc-text">
+                                <span>Действующие сертификаты:</span>
+                                стоматология ортопедическая;
+                                стоматология хирургическая <br>
+                                <span>Все виды высококачественного протезирования:</span> съемные,
+                                несъемные, безметалловые конструкции, цирконий, проте-
+                                зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="popup__grid-item">
-                    <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
-                    <div class="popup__info">
-                        <p class="popup__info-name">
-                            Саидов Шамсулло Нарзуллоевич
-                        </p>
-                        <p class="popup__info-specialization">
-                            Врач-стоматолог
-                            <span>Ведущий специалист</span>
-                        </p>
-                    </div>
-                    <div class="popup__desc">
-                        <p class="popup__desc-title">
-                            Опыт работы более 25 лет
-                        </p>
-                        <div class="popup__desc-text">
-                            <span>Действующие сертификаты:</span>
-                            стоматология ортопедическая;
-                            стоматология хирургическая <br>
-                            <span>Все виды высококачественного протезирования:</span> съемные,
-                            несъемные, безметалловые конструкции, цирконий, проте-
-                            зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__grid-item">
+                        <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <div class="popup__info">
+                            <p class="popup__info-name">
+                                Саидов Шамсулло Нарзуллоевич
+                            </p>
+                            <p class="popup__info-specialization">
+                                Врач-стоматолог
+                                <span>Ведущий специалист</span>
+                            </p>
+                        </div>
+                        <div class="popup__desc">
+                            <p class="popup__desc-title">
+                                Опыт работы более 25 лет
+                            </p>
+                            <div class="popup__desc-text">
+                                <span>Действующие сертификаты:</span>
+                                стоматология ортопедическая;
+                                стоматология хирургическая <br>
+                                <span>Все виды высококачественного протезирования:</span> съемные,
+                                несъемные, безметалловые конструкции, цирконий, проте-
+                                зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="popup__grid-item">
-                    <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
-                    <div class="popup__info">
-                        <p class="popup__info-name">
-                            Саидов Шамсулло Нарзуллоевич
-                        </p>
-                        <p class="popup__info-specialization">
-                            Врач-стоматолог
-                            <span>Ведущий специалист</span>
-                        </p>
-                    </div>
-                    <div class="popup__desc">
-                        <p class="popup__desc-title">
-                            Опыт работы более 25 лет
-                        </p>
-                        <div class="popup__desc-text">
-                            <span>Действующие сертификаты:</span>
-                            стоматология ортопедическая;
-                            стоматология хирургическая <br>
-                            <span>Все виды высококачественного протезирования:</span> съемные,
-                            несъемные, безметалловые конструкции, цирконий, проте-
-                            зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__grid-item">
+                        <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <div class="popup__info">
+                            <p class="popup__info-name">
+                                Саидов Шамсулло Нарзуллоевич
+                            </p>
+                            <p class="popup__info-specialization">
+                                Врач-стоматолог
+                                <span>Ведущий специалист</span>
+                            </p>
+                        </div>
+                        <div class="popup__desc">
+                            <p class="popup__desc-title">
+                                Опыт работы более 25 лет
+                            </p>
+                            <div class="popup__desc-text">
+                                <span>Действующие сертификаты:</span>
+                                стоматология ортопедическая;
+                                стоматология хирургическая <br>
+                                <span>Все виды высококачественного протезирования:</span> съемные,
+                                несъемные, безметалловые конструкции, цирконий, проте-
+                                зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="popup__grid-item">
-                    <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
-                    <div class="popup__info">
-                        <p class="popup__info-name">
-                            Саидов Шамсулло Нарзуллоевич
-                        </p>
-                        <p class="popup__info-specialization">
-                            Врач-стоматолог
-                            <span>Ведущий специалист</span>
-                        </p>
-                    </div>
-                    <div class="popup__desc">
-                        <p class="popup__desc-title">
-                            Опыт работы более 25 лет
-                        </p>
-                        <div class="popup__desc-text">
-                            <span>Действующие сертификаты:</span>
-                            стоматология ортопедическая;
-                            стоматология хирургическая <br>
-                            <span>Все виды высококачественного протезирования:</span> съемные,
-                            несъемные, безметалловые конструкции, цирконий, проте-
-                            зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__grid-item">
+                        <img class="popup__img" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <div class="popup__info">
+                            <p class="popup__info-name">
+                                Саидов Шамсулло Нарзуллоевич
+                            </p>
+                            <p class="popup__info-specialization">
+                                Врач-стоматолог
+                                <span>Ведущий специалист</span>
+                            </p>
+                        </div>
+                        <div class="popup__desc">
+                            <p class="popup__desc-title">
+                                Опыт работы более 25 лет
+                            </p>
+                            <div class="popup__desc-text">
+                                <span>Действующие сертификаты:</span>
+                                стоматология ортопедическая;
+                                стоматология хирургическая <br>
+                                <span>Все виды высококачественного протезирования:</span> съемные,
+                                несъемные, безметалловые конструкции, цирконий, проте-
+                                зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -431,53 +446,58 @@
                 это отличный специалист, настоящий профессионал своего дела
             </p>
             <div class="popup__grid popup__grid--doctor">
-                <div class="popup__grid-item popup__grid-item--left">
-                    <img class="popup__img--doctor" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
-                    <div class="popup__info">
-                        <p class="popup__info-name">
-                            Саидов Шамсулло Нарзуллоевич
-                        </p>
-                        <p class="popup__info-specialization">
-                            Врач-стоматолог
-                            <span>Ведущий специалист</span>
-                        </p>
-                    </div>
-                    <div class="popup__desc">
-                        <p class="popup__desc-title">
-                            Опыт работы более 25 лет
-                        </p>
-                        <div class="popup__desc-text">
-                            <span>Действующие сертификаты:</span>
-                            стоматология ортопедическая;
-                            стоматология хирургическая <br>
-                            <span>Все виды высококачественного протезирования:</span> съемные,
-                            несъемные, безметалловые конструкции, цирконий, проте-
-                            зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__grid-item popup__grid-item--left">
+                        <img class="popup__img popup__img--doctor" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <div class="popup__info">
+                            <p class="popup__info-name">
+                                Саидов Шамсулло Нарзуллоевич
+                            </p>
+                            <p class="popup__info-specialization">
+                                Врач-стоматолог
+                                <span>Ведущий специалист</span>
+                            </p>
+                        </div>
+                        <div class="popup__desc">
+                            <p class="popup__desc-title">
+                                Опыт работы более 25 лет
+                            </p>
+                            <div class="popup__desc-text">
+                                <span>Действующие сертификаты:</span>
+                                стоматология ортопедическая;
+                                стоматология хирургическая <br>
+                                <span>Все виды высококачественного протезирования:</span> съемные,
+                                несъемные, безметалловые конструкции, цирконий, проте-
+                                зирование на имплантах, драгметаллах, вкладки, виниры, гнатология и хирургия
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="popup__right">
-                    <p class="popup__right-title">
-                        Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у <br> 
-                        <span>Иванова Оксана Григорьевна</span>
-                    </p>
-                    <div class="popup__messenger">
-                        <div class="popup__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                <div class="popup__grid-wrap-item">
+                    <div class="popup__right">
+                        <p class="popup__right-title">
+                            Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у
+                            <br>
+                            <span>Иванова Оксана Григорьевна</span>
+                        </p>
+                        <div class="popup__messenger">
+                            <div class="popup__messenger-icon">
+                                <img src="img/telegram.svg" alt="Иконка телеграмма">
+                                <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            </div>
+                            <p class="card__messenger-text">
+                                спросить в мессенджере
+                            </p>
                         </div>
-                        <p class="card__messenger-text">
-                            спросить в мессенджере
-                        </p>
+                        <form action="" class="popup__form" method="post">
+                            <p class="popup__form-title">
+                                В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет
+                            </p>
+                            <input class="popup__form-name" type="text" placeholder="Имя" maxlength="30" required>
+                            <input class="popup__form-tel" type="tel" placeholder="Телефон" maxlength="11" required>
+                            <button type="submit" class="btn btn--popup-form">Записаться</button>
+                        </form>
                     </div>
-                    <form action="" class="popup__form" method="post">
-                        <p class="popup__form-title">
-                            В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет
-                        </p>
-                        <input class="popup__form-name" type="text" placeholder="Имя" maxlength="30" required>
-                        <input class="popup__form-tel" type="tel" placeholder="Телефон" maxlength="11" required>
-                        <button type="submit" class="btn btn--popup-form">Записаться</button>
-                    </form>
                 </div>
             </div>
             <div class="popup__footer popup__footer--doctor">
@@ -499,6 +519,15 @@
                     <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     <p class="logo__title">Стоматологическая клиника</p>
                 </div>
+            </div>
+            <div class="hamb" id="hamb-footer">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="footer__right">
                 <address class="address">
                     <div class="address__top">
                         <img src="img/location.svg" alt="Иконка адреса">
@@ -521,11 +550,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer__right">
                 <div class="social-network">
-                    <img src="img/telegram.svg" alt="Иконка адреса">
-                    <img src="img/whatsapp.svg" alt="Иконка адреса">
+                    <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                    <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                 </div>
                 <div class="phone">
                     <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -536,20 +563,44 @@
         </div>
     </footer>
 
+    <div class="menu" id="menu">
+        <div class="menu__container">
+            <div class="menu__header">
+                <h5 class="menu__h5">Меню</h5>
+                <button class="menu__close">&times;</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="index.html">Главная</a></li>
+                <li class="menu__list-item"><a href="service.html">Услуги</a></li>
+                <li class="menu__list-item"><a href="doctors.html">Врачи</a></li>
+                <li class="menu__list-item"><a href="about.html">О клинике</a></li>
+                <li class="menu__list-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-menu" id="popup"></div>
+
     <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"
-        integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="owlCarousel/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         $(document).ready(function () {
-            $('.owl-carousel').owlCarousel({
+            $('.doctors__slider').owlCarousel({
                 items: 1,
                 nav: true,
                 navText: ["<div class='arrow-slider arrow-prev'></div>", "<div class='arrow-slider arrow-next'></div>"],
                 loop: true,
-                dots: false
+                dots: false,
+                responsiveBaseWidth: '#doctors__slider-id',
+                dots: true,
+                dotsEach: 1,
+                dotsContainer: '.doctors__left',
+                touchDrag: false,
+                mouseDrag: false,
             });
         });
     </script>
