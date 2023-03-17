@@ -20,14 +20,19 @@
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
             <nav class="nav">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="">Главная</a></li>
-                    <li class="nav__list-item"><a href="">Услуги</a></li>
-                    <li class="nav__list-item"><a href="">Врачи</a></li>
-                    <li class="nav__list-item"><a href="">Отзывы</a></li>
-                    <li class="nav__list-item"><a href="">Лицензии</a></li>
-                    <li class="nav__list-item"><a href="">О клинике</a></li>
-                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                    <li class="nav__list-item"><a href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a href="service.html">Услуги</a></li>
+                    <li class="nav__list-item"><a href="doctors.html">Врачи</a></li>
+                    <li class="nav__list-item"><a href="about.html">О клинике</a></li>
+                    <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,6 +40,9 @@
 
     <section class="contacts">
         <div id="map" class="contacts__map"></div>
+        <div class="contacts__map contacts__map--popup">
+            <div class="popup__close popup__close--map">&times;</div>
+        </div>
         <div class="container">
             <div class="contacts__block">
                 <h3 class="contacts__h3">Контакты</h3>
@@ -42,7 +50,7 @@
                     г. Коломна, ул. Октябрьской революции д. 161
                 </address>
                 <div class="contacts__route">
-                    <a class="contacts__route-text" href="">Проложить маршрут</a>
+                    <p id="route" class="contacts__route-text" >Проложить маршрут</p>
                     <img src="img/contacts/icon-mark.svg" alt="Метка местоположения" class="contacts__route-img">
                 </div>
                 <div class="contacts__time">
@@ -57,16 +65,32 @@
                 </div>
                 <div class="contacts__messenger">
                     <div class="contacts__messenger-icon">
-                        <img src="img/telegram.svg" alt="Иконка телеграмма">
-                        <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                        <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                        <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                     </div>
                     <p class="contacts__messenger-text">спросить в мессенджере</p>
                 </div>
                 <div class="contacts__social">
-                    <img src="img/VK.svg" alt="Иконка Вконтакте">
+                    <a href=""><img src="img/VK.svg" alt="Иконка Вконтакте"></a>
                     <p class="contacts__social-text">Наша круппа в ВКонтакте</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="free">
+        <div class="container">
+            <form action="" class="popup__form free__form" method="post">
+                <h5 class="free__form-h5">
+                    Запишитесь на бесплатную первичную консультацию и диагностику зубов
+                </h5>
+                <p class="popup__form-title free__form-title">
+                    В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет
+                </p>
+                <input class="popup__form-name" type="text" placeholder="Имя" maxlength="30" required>
+                <input class="popup__form-tel" type="tel" placeholder="Телефон" maxlength="11" required>
+                <button type="submit" class="btn btn--popup-form">Записаться</button>
+            </form>
         </div>
     </section>
 
@@ -77,6 +101,15 @@
                     <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     <p class="logo__title">Стоматологическая клиника</p>
                 </div>
+            </div>
+            <div class="hamb" id="hamb-footer">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="footer__right">
                 <address class="address">
                     <div class="address__top">
                         <img src="img/location.svg" alt="Иконка адреса">
@@ -99,11 +132,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer__right">
                 <div class="social-network">
-                    <img src="img/telegram.svg" alt="Иконка адреса">
-                    <img src="img/whatsapp.svg" alt="Иконка адреса">
+                    <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                    <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                 </div>
                 <div class="phone">
                     <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -114,8 +145,29 @@
         </div>
     </footer>
 
+    <div class="menu" id="menu">
+        <div class="menu__container">
+            <div class="menu__header">
+                <h5 class="menu__h5">Меню</h5>
+                <button class="menu__close">&times;</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="index.html">Главная</a></li>
+                <li class="menu__list-item"><a href="service.html">Услуги</a></li>
+                <li class="menu__list-item"><a href="doctors.html">Врачи</a></li>
+                <li class="menu__list-item"><a href="about.html">О клинике</a></li>
+                <li class="menu__list-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-menu" id="popup"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5703c528-fb4a-4c0a-a0b1-23d68ed92a66&lang=ru_RU"></script>
     <script src="js/script.js"></script>
+    <script src="js/ymaps.js"></script>
+
 
 </body>
 
