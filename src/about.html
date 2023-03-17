@@ -20,14 +20,19 @@
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
             <nav class="nav">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="">Главная</a></li>
-                    <li class="nav__list-item"><a href="">Услуги</a></li>
-                    <li class="nav__list-item"><a href="">Врачи</a></li>
-                    <li class="nav__list-item"><a href="">Отзывы</a></li>
-                    <li class="nav__list-item"><a href="">Лицензии</a></li>
-                    <li class="nav__list-item"><a href="">О клинике</a></li>
-                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                    <li class="nav__list-item"><a href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a href="service.html">Услуги</a></li>
+                    <li class="nav__list-item"><a href="doctors.html">Врачи</a></li>
+                    <li class="nav__list-item"><a href="about.html">О клинике</a></li>
+                    <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -299,9 +304,11 @@
                 </div>
                 <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
                 </div>
                 <div class="license__slider-item item">
@@ -309,9 +316,11 @@
                 </div>
                 <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
                 </div>
                 <div class="license__slider-item item">
@@ -319,9 +328,11 @@
                 </div>
                 <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div><div class="license__slider-item item">
+                </div>
+                <div class="license__slider-item item">
                     <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
                 </div>
             </div>
@@ -339,6 +350,15 @@
                     <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     <p class="logo__title">Стоматологическая клиника</p>
                 </div>
+            </div>
+            <div class="hamb" id="hamb-footer">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="footer__right">
                 <address class="address">
                     <div class="address__top">
                         <img src="img/location.svg" alt="Иконка адреса">
@@ -361,11 +381,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer__right">
                 <div class="social-network">
-                    <img src="img/telegram.svg" alt="Иконка адреса">
-                    <img src="img/whatsapp.svg" alt="Иконка адреса">
+                    <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                    <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                 </div>
                 <div class="phone">
                     <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -376,11 +394,30 @@
         </div>
     </footer>
 
+    <div class="menu" id="menu">
+        <div class="menu__container">
+            <div class="menu__header">
+                <h5 class="menu__h5">Меню</h5>
+                <button class="menu__close">&times;</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="index.html">Главная</a></li>
+                <li class="menu__list-item"><a href="service.html">Услуги</a></li>
+                <li class="menu__list-item"><a href="doctors.html">Врачи</a></li>
+                <li class="menu__list-item"><a href="about.html">О клинике</a></li>
+                <li class="menu__list-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-menu" id="popup"></div>
+
     <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.min.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"
-        integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="owlCarousel/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -392,7 +429,20 @@
                 navText: ["<div class='arrow-slider arrow-slider--about arrow-prev'></div>", "<div class='arrow-slider arrow-slider--about arrow-next'></div>"],
                 dots: true,
                 dotsEach: 4,
-                dotsContainer: '.owl-dots--about'
+                dotsContainer: '.owl-dots--about',
+                responsive: {
+                    0: {
+                        items: 1,
+                        dotsEach: 1,
+                    },
+                    768: {
+                        items: 2,
+                        dotsEach: 2,
+                    },
+                    992: {
+                        items: 4
+                    }
+                }
             });
             $('.reviews__slider').owlCarousel({
                 items: 1,
@@ -403,7 +453,7 @@
                 dots: true,
                 dotsEach: 1,
                 dotsContainer: '.owl-dots--reviews',
-                autoHeight: true
+                autoHeight: true,
             });
             $('.license__slider').owlCarousel({
                 items: 4,
@@ -413,7 +463,20 @@
                 navText: ["<div class='arrow-slider arrow-slider--license arrow-prev'></div>", "<div class='arrow-slider arrow-slider--license arrow-next'></div>"],
                 dots: true,
                 dotsEach: 4,
-                dotsContainer: '.owl-dots--license'
+                dotsContainer: '.owl-dots--license',
+                responsive: {
+                    0: {
+                        items: 1,
+                        dotsEach: 1,
+                    },
+                    768: {
+                        items: 2,
+                        dotsEach: 2,
+                    },
+                    992: {
+                        items: 4
+                    }
+                }
             });
         });
     </script>
