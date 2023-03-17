@@ -20,14 +20,19 @@
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
             <nav class="nav">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="">Главная</a></li>
-                    <li class="nav__list-item"><a href="">Услуги</a></li>
-                    <li class="nav__list-item"><a href="">Врачи</a></li>
-                    <li class="nav__list-item"><a href="">Отзывы</a></li>
-                    <li class="nav__list-item"><a href="">Лицензии</a></li>
-                    <li class="nav__list-item"><a href="">О клинике</a></li>
-                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                    <li class="nav__list-item"><a href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a href="service.html">Услуги</a></li>
+                    <li class="nav__list-item"><a href="doctors.html">Врачи</a></li>
+                    <li class="nav__list-item"><a href="about.html">О клинике</a></li>
+                    <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -57,8 +62,8 @@
                     <img class="card__img" src="img/service/surgery.png" alt="Удаление зуба">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -87,8 +92,8 @@
                     <img class="card__img" src="img/service/therapy.png" alt="Инструменты">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -120,8 +125,8 @@
                     <img class="card__img" src="img/service/orthopedics.png" alt="Коронка">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -150,8 +155,8 @@
                     <img class="card__img" src="img/service/Implantation.png" alt="Коронка">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -180,8 +185,8 @@
                     <img class="card__img" src="img/service/orthodontics.png" alt="Брекеты">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -204,8 +209,8 @@
                     <img class="card__img" src="img/service/bleaching.png" alt="Чистый зуб">
                     <div class="card__messenger">
                         <div class="card__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="card__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -222,12 +227,14 @@
                         <h3 class="hygiene__video-h3">
                             Технология профессиональной гигиены полости рта <span>в 4 этапа</span>
                         </h3>
-                        <p class="hygiene__video-text">
-                            Посмотрите видео о технологии
-                        </p>
-                        <div class="hygiene__video-play">
-                            <video src="video/demo.mp4">
-                            </video>
+                        <div class="hygiene__wrap-video">
+                            <p class="hygiene__video-text">
+                                Посмотрите видео о технологии
+                            </p>
+                            <div class="hygiene__video-play">
+                                <video src="video/demo.mp4">
+                                </video>
+                            </div>
                         </div>
                         <button class="btn btn--hygiene">Узнать цены</button>
                     </div>
@@ -262,6 +269,7 @@
                             </li>
                         </ul>
                     </div>
+                    <button class="btn btn--hygiene btn--medium">Узнать цены</button>
                 </div>
                 <div class="hygiene__bottom">
                     <div class="hygiene__wrap-step">
@@ -291,8 +299,8 @@
                     </div>
                     <div class="hygiene__messenger">
                         <div class="hygiene__messenger-icon">
-                            <img src="img/telegram.svg" alt="Иконка телеграмма">
-                            <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="hygiene__messenger-text">спросить в мессенджере</p>
                     </div>
@@ -312,6 +320,15 @@
                     <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     <p class="logo__title">Стоматологическая клиника</p>
                 </div>
+            </div>
+            <div class="hamb" id="hamb-footer">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="footer__right">
                 <address class="address">
                     <div class="address__top">
                         <img src="img/location.svg" alt="Иконка адреса">
@@ -334,11 +351,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer__right">
                 <div class="social-network">
-                    <img src="img/telegram.svg" alt="Иконка адреса">
-                    <img src="img/whatsapp.svg" alt="Иконка адреса">
+                    <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                    <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                 </div>
                 <div class="phone">
                     <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -348,6 +363,27 @@
             </div>
         </div>
     </footer>
+
+    <div class="menu" id="menu">
+        <div class="menu__container">
+            <div class="menu__header">
+                <h5 class="menu__h5">Меню</h5>
+                <button class="menu__close">&times;</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="index.html">Главная</a></li>
+                <li class="menu__list-item"><a href="service.html">Услуги</a></li>
+                <li class="menu__list-item"><a href="doctors.html">Врачи</a></li>
+                <li class="menu__list-item"><a href="about.html">О клинике</a></li>
+                <li class="menu__list-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-menu" id="popup"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
