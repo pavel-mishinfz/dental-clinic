@@ -20,14 +20,19 @@
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
             <nav class="nav">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="">Главная</a></li>
-                    <li class="nav__list-item"><a href="">Услуги</a></li>
-                    <li class="nav__list-item"><a href="">Врачи</a></li>
-                    <li class="nav__list-item"><a href="">Отзывы</a></li>
-                    <li class="nav__list-item"><a href="">Лицензии</a></li>
-                    <li class="nav__list-item"><a href="">О клинике</a></li>
-                    <li class="nav__list-item"><a href="">Контакты</a></li>
+                    <li class="nav__list-item"><a href="index.html">Главная</a></li>
+                    <li class="nav__list-item"><a href="service.html">Услуги</a></li>
+                    <li class="nav__list-item"><a href="doctors.html">Врачи</a></li>
+                    <li class="nav__list-item"><a href="about.html">О клинике</a></li>
+                    <li class="nav__list-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,22 +46,26 @@
                     зубов</p>
                 <button class="btn btn--preview">Записаться</button>
             </div>
-            <div class="features">
-                <div class="features__item">
+        </div>
+    </main>
+    <section class="features">
+        <div class="container">
+            <div class="features__list">
+                <div class="features__list-item">
                     <img src="img/main/calendar.svg" alt="Календарь" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Работаем с 2011 года</p>
                         <p class="features__text">Многолетний опыт работы - залог качественного сервиса</p>
                     </div>
                 </div>
-                <div class="features__item">
+                <div class="features__list-item">
                     <img src="img/main/user.svg" alt="Пользователь" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Опытные врачи</p>
                         <p class="features__text">Огромный опыт персонала и слаженность работы</p>
                     </div>
                 </div>
-                <div class="features__item">
+                <div class="features__list-item">
                     <img src="img/main/fingerprint.svg" alt="Отпечаток пальца" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Уникальный подход</p>
@@ -65,7 +74,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </section>
     <section class="consultation">
         <div class="container consultation__container">
             <div class="consultation__header">
@@ -76,9 +85,9 @@
                     На бесплатной консультации врач клиники проведет диагностику всех зубов:
                 </h3>
             </div>
-            <div class="consultation__list">
-                <div class="consultation__list-item">
-                    <img class="consultation__img" src="img/consultation/inspection.png" alt="Осмотр">
+            <div class="consultation__list--small-device">
+                <div class="consultation__list-item--small-device">
+                    <div class="consultation__img"><img src="img/consultation/inspection.png" alt="Осмотр"></div>
                     <p class="consultation__text">
                         Полный осмотр и диагностика полости рта
                     </p>
@@ -86,8 +95,8 @@
                         При необходимости сделаем дополнительный снимок зубов, у нас в клинике
                     </p>
                 </div>
-                <div class="consultation__list-item">
-                    <img class="consultation__img" src="img/consultation/plane.png" alt="Осмотр">
+                <div class="consultation__list-item--small-device">
+                    <div class="consultation__img"><img src="img/consultation/plane.png" alt="Осмотр"></div>
                     <p class="consultation__text">
                         Составит 2-3 плана лечения на выбор
                     </p>
@@ -95,10 +104,42 @@
                         Вы сможете выбрать подходящий план лечения, исходя из бюджета
                     </p>
                 </div>
-                <div class="consultation__list-item">
-                    <img class="consultation__img" src="img/consultation/clean.png" alt="Осмотр">
+                <div class="consultation__list-item--small-device">
+                    <div class="consultation__img"><img src="img/consultation/clean.png" alt="Осмотр"></div>
                     <p class="consultation__text">
                         При необходимости проведем проф. гигиену
+                    </p>
+                    <p class="consultation__small-text">
+                        Вы сможете выбрать подходящий план лечения, исходя из бюджета
+                    </p>
+                    <p class="consultation__small-text">
+                        Чистка зубов в 4 этапа
+                    </p>
+                </div>
+            </div>
+            <div class="consultation__list">
+                <div class="consultation__list-item consultation__list-item--img">
+                    <div class="consultation__img"><img src="img/consultation/inspection.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="img/consultation/plane.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="img/consultation/clean.png" alt="Осмотр"></div>
+                </div>
+                <div class="consultation__list-item consultation__list-item--text">
+                    <p class="consultation__text">
+                        Полный осмотр и диагностика полости рта
+                    </p>
+                    <p class="consultation__text">
+                        Составит 2-3 плана лечения на выбор
+                    </p>
+                    <p class="consultation__text">
+                        При необходимости проведем проф. гигиену
+                    </p>
+                </div>
+                <div class="consultation__list-item consultation__list-item--small-text">
+                    <p class="consultation__small-text">
+                        При необходимости сделаем дополнительный снимок зубов, у нас в клинике
+                    </p>
+                    <p class="consultation__small-text">
+                        Вы сможете выбрать подходящий план лечения, исходя из бюджета
                     </p>
                     <p class="consultation__small-text">
                         Чистка зубов в 4 этапа
@@ -115,6 +156,15 @@
                     <img class="logo__img" src="img/logo.svg" alt="Логотип">
                     <p class="logo__title">Стоматологическая клиника</p>
                 </div>
+            </div>
+            <div class="hamb" id="hamb-footer">
+                <div class="hamb__field" id="hamb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="footer__right">
                 <address class="address">
                     <div class="address__top">
                         <img src="img/location.svg" alt="Иконка адреса">
@@ -137,11 +187,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="footer__right">
                 <div class="social-network">
-                    <img src="img/telegram.svg" alt="Иконка телеграмма">
-                    <img src="img/whatsapp.svg" alt="Иконка whatsapp'a">
+                    <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
+                    <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
                 </div>
                 <div class="phone">
                     <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -151,6 +199,27 @@
             </div>
         </div>
     </footer>
+
+    <div class="menu" id="menu">
+        <div class="menu__container">
+            <div class="menu__header">
+                <h5 class="menu__h5">Меню</h5>
+                <button class="menu__close">&times;</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__list-item"><a href="index.html">Главная</a></li>
+                <li class="menu__list-item"><a href="service.html">Услуги</a></li>
+                <li class="menu__list-item"><a href="doctors.html">Врачи</a></li>
+                <li class="menu__list-item"><a href="about.html">О клинике</a></li>
+                <li class="menu__list-item"><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="popup-menu" id="popup"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
