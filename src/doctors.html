@@ -49,8 +49,8 @@
             </div>
 
             <div class="doctors__wrap">
-                <ul class="doctors__left owl-dots">
-                    <div class="doctors__preview">
+                <div class="doctors__left owl-dots">
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Саидов Шамсулло Нарзуллоевич
                         </p>
@@ -59,8 +59,8 @@
                                 Врач-стоматолог <span>Ведущий специалист</span>
                             </p>
                         </div>
-                    </div>
-                    <div class="doctors__preview">
+                    </button>
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Анисимов Дмитрий Владимирович
                         </p>
@@ -69,8 +69,8 @@
                                 Врач-стоматолог
                             </p>
                         </div>
-                    </div>
-                    <div class="doctors__preview">
+                    </button>
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Варданян Давид Араевич
                         </p>
@@ -79,8 +79,8 @@
                                 Врач-стоматолог
                             </p>
                         </div>
-                    </div>
-                    <div class="doctors__preview">
+                    </button>
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Соха Анастасия Юрьевна
                         </p>
@@ -89,8 +89,8 @@
                                 Врач-стоматолог
                             </p>
                         </div>
-                    </div>
-                    <div class="doctors__preview">
+                    </button>
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Иванова Оксана Григорьевна
                         </p>
@@ -99,8 +99,8 @@
                                 Врач-стоматолог
                             </p>
                         </div>
-                    </div>
-                    <div class="doctors__preview">
+                    </button>
+                    <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
                             Синельщикова Елена Дмитриевна
                         </p>
@@ -109,11 +109,11 @@
                                 Врач-стоматолог
                             </p>
                         </div>
-                    </div>
-                </ul>
+                    </button>
+                </div>
                 <div class="doctors__right">
                     <div class="doctors__wrap-slider">
-                        <div id="doctors__slider-id" class="doctors__slider owl-carousel owl-theme">
+                        <div class="doctors__slider owl-carousel owl-theme">
                             <div class="doctors__slider-item item">
                                 <img class="doctors__img" src="img/doctors/person-1.png"
                                     alt="Саидов Шамсулло Нарзуллоевич">
@@ -448,7 +448,8 @@
             <div class="popup__grid popup__grid--doctor">
                 <div class="popup__grid-wrap-item">
                     <div class="popup__grid-item popup__grid-item--left">
-                        <img class="popup__img popup__img--doctor" src="img/doctors/person-1.png" alt="Саидов Шамсулло Нарзуллоевич">
+                        <img class="popup__img popup__img--doctor" src="img/doctors/person-1.png"
+                            alt="Саидов Шамсулло Нарзуллоевич">
                         <div class="popup__info">
                             <p class="popup__info-name">
                                 Саидов Шамсулло Нарзуллоевич
@@ -476,7 +477,8 @@
                 <div class="popup__grid-wrap-item">
                     <div class="popup__right">
                         <p class="popup__right-title">
-                            Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема у
+                            Напишите свой номер телефона, и вам перезвонят в ближайшее время чтобы уточнить время приема
+                            у
                             <br>
                             <span>Иванова Оксана Григорьевна</span>
                         </p>
@@ -594,13 +596,9 @@
                 nav: true,
                 navText: ["<div class='arrow-slider arrow-prev'></div>", "<div class='arrow-slider arrow-next'></div>"],
                 loop: true,
-                dots: false,
-                responsiveBaseWidth: '#doctors__slider-id',
                 dots: true,
                 dotsEach: 1,
-                dotsContainer: '.doctors__left',
-                touchDrag: false,
-                mouseDrag: false,
+                dotsContainer: '.doctors__left.owl-dots',
             });
         });
     </script>

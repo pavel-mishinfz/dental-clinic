@@ -191,7 +191,7 @@ input:active {
 .main {
     flex: 1 1 auto;
     background: url(../img/main/main-bg.png) top center no-repeat;
-    background-size: 100% 70rem;
+    background-size: 100% 100%;
 
     &__container {
         height: 100%;
@@ -278,7 +278,7 @@ input:active {
     flex-direction: column;
     align-items: start;
     margin-top: 92px;
-    padding-bottom: 132px;
+    margin-bottom: 132px;
 
     &__h1 {
         max-width: 93rem;
@@ -909,17 +909,24 @@ input:active {
     }
 
     &__preview {
-        &.active {
-            background-color: #BDF8F9;
+        &.owl-dot {
+            text-align: left;
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 23px 19px 10px 190px;
+            background-color: @bg-color;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 20px;
+            transition: background-color 0.5s;
+
+            &.active {
+                width: 100%;
+                height: auto;
+                background-color: #BDF8F9;
+            }
         }
 
-        position: relative;
-        width: 100%;
-        padding: 23px 19px 10px 190px;
-        background-color: @bg-color;
-        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
-        border-radius: 20px;
-        transition: background-color 0.5s;
 
         &:hover {
             cursor: pointer;
@@ -2066,10 +2073,6 @@ input:active {
         overflow: hidden;
     }
 
-    .main {
-        background-size: cover;
-    }
-
     .nav__list {
         display: none;
     }
@@ -2449,11 +2452,13 @@ input:active {
                 column-gap: 80px;
                 margin-top: 0;
             }
+
             &-item {
                 max-width: 42.2rem;
                 width: 100%;
                 padding-right: 16px;
                 padding-top: 20px;
+
                 &--left {
                     max-width: 100%;
                 }
@@ -2484,6 +2489,7 @@ input:active {
                 font-size: 2rem;
             }
         }
+
         &__right {
             &-title {
                 font-size: 2.6rem;
@@ -2493,13 +2499,12 @@ input:active {
 }
 
 @media (max-width: 992px) {
-    .main {
-        background-size: 130% 70rem;
-    }
 
     .preview {
         flex-direction: column;
         align-items: start;
+        margin-top: 60px;
+        margin-bottom: 100px;
     }
 
     .address {
@@ -2603,15 +2608,19 @@ input:active {
         &__img {
             top: 52%;
         }
+
         &__right {
             max-width: 37rem;
+
             &-title {
                 font-size: 2.4rem;
             }
         }
+
         &__form {
             padding-left: 50px;
             padding-right: 50px;
+
             &-title {
                 font-size: 2rem;
             }
@@ -2621,7 +2630,7 @@ input:active {
 
 @media (max-width: 768px) {
     .main {
-        background-size: 130% 70rem;
+        background-size: 130% 100%;
     }
 
     .menu {
@@ -2810,7 +2819,9 @@ input:active {
 
     .doctors {
         &__preview {
-            padding-left: 19px;
+            &.owl-dot {
+                padding-left: 19px;
+            }
 
             &-name {
                 font-size: 1.8rem;
@@ -2860,24 +2871,29 @@ input:active {
                 font-size: 2.4rem;
             }
         }
+
         &__grid {
             &--doctor {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
+
             &-item {
                 &--left {
                     max-width: 70%;
                 }
             }
+
             &-wrap-item {
                 width: 100%;
             }
         }
+
         &__right {
             max-width: 100%;
         }
+
         &__info {
 
             &-name {
@@ -2901,10 +2917,12 @@ input:active {
         &__img {
             top: 45%;
         }
+
         &__desc {
             &-title {
                 font-size: 1.8rem;
             }
+
             &-text {
                 font-size: 1.6rem;
             }
@@ -3136,35 +3154,43 @@ input:active {
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
     .popup {
         &__header {
             font-size: 2.4em;
+
             &--doctor {
                 font-size: 2.2rem;
             }
         }
+
         &__subtitle {
             font-size: 2.2rem;
         }
+
         &__grid {
             grid-template-columns: 1fr;
+
             &-item {
                 &--left {
                     max-width: 100%;
                 }
             }
         }
+
         &__right {
             &-title {
                 text-align: center;
                 font-size: 2rem;
             }
         }
+
         &__form {
             &-title {
                 font-size: 1.8rem;
             }
         }
+
         &__close {
             top: 10px;
             right: 10px;
@@ -3311,18 +3337,23 @@ input:active {
         &__header {
             font-size: 2rem;
         }
+
         &__footer {
+
             &-other,
             &-refresh {
                 font-size: 1.8rem;
             }
+
             &--doctor {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
             }
         }
+
         &__form {
+
             &-name,
             &-tel {
                 width: 25rem;
@@ -3331,6 +3362,7 @@ input:active {
             }
         }
     }
+
     .btn--popup-form {
         width: 25rem;
         padding-left: 0;
@@ -3349,10 +3381,12 @@ input:active {
         &__img {
             top: 50%;
         }
+
         &__footer {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             &--doctor {
                 align-items: start;
             }

@@ -194,7 +194,7 @@ input:active::placeholder {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   background: url(../img/main/main-bg.png) top center no-repeat;
-  background-size: 100% 70rem;
+  background-size: 100% 100%;
 }
 .main__container {
   height: 100%;
@@ -298,7 +298,7 @@ input:active::placeholder {
       -ms-flex-align: start;
           align-items: start;
   margin-top: 92px;
-  padding-bottom: 132px;
+  margin-bottom: 132px;
 }
 .preview__h1 {
   max-width: 93rem;
@@ -1004,9 +1004,11 @@ input:active::placeholder {
 .doctors__left.owl-dots {
   margin-top: 0;
 }
-.doctors__preview {
+.doctors__preview.owl-dot {
+  text-align: left;
   position: relative;
   width: 100%;
+  height: auto;
   padding: 23px 19px 10px 190px;
   background-color: #f3fefe;
   -webkit-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
@@ -1015,7 +1017,9 @@ input:active::placeholder {
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-.doctors__preview.active {
+.doctors__preview.owl-dot.active {
+  width: 100%;
+  height: auto;
   background-color: #BDF8F9;
 }
 .doctors__preview:hover {
@@ -2223,9 +2227,6 @@ input:active::placeholder {
   body.noscroll {
     overflow: hidden;
   }
-  .main {
-    background-size: cover;
-  }
   .nav__list {
     display: none;
   }
@@ -2600,9 +2601,6 @@ input:active::placeholder {
   }
 }
 @media (max-width: 992px) {
-  .main {
-    background-size: 130% 70rem;
-  }
   .preview {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2611,6 +2609,8 @@ input:active::placeholder {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+    margin-top: 60px;
+    margin-bottom: 100px;
   }
   .address__title {
     font-size: 1.6rem;
@@ -2698,7 +2698,7 @@ input:active::placeholder {
 }
 @media (max-width: 768px) {
   .main {
-    background-size: 130% 70rem;
+    background-size: 130% 100%;
   }
   .menu {
     width: 50%;
@@ -2837,7 +2837,7 @@ input:active::placeholder {
   .contacts__block {
     max-width: none;
   }
-  .doctors__preview {
+  .doctors__preview.owl-dot {
     padding-left: 19px;
   }
   .doctors__preview-name {
