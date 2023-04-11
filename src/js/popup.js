@@ -10,9 +10,9 @@ function formFeedbackHandler(e) {
     body.classList.toggle("noscroll");
 }
 
-const closeFeedbackForm = document.querySelectorAll('.popup__close');
+const closeFeedbackForm = document.querySelector('.popup__close--feedback');
 
-closeFeedbackForm.forEach((btnClose) => btnClose.addEventListener("click", closeOnClickForm));
+closeFeedbackForm.addEventListener("click", closeOnClickForm);
 
 function closeOnClickForm(e) {
     e.preventDefault();
@@ -32,14 +32,16 @@ function helperItemsHandler(e) {
     body.classList.toggle("noscroll");
 }
 
-const closeHelperForm = document.querySelectorAll('.popup__close');
+const closeHelperForm = document.querySelector('.popup__close--helpers');
+if (closeHelperForm) {
 
-closeHelperForm.forEach((btnClose) => btnClose.addEventListener("click", closeOnClickHelperForm));
+    closeHelperForm.addEventListener("click", closeOnClickHelperForm);
 
-function closeOnClickHelperForm(e) {
-    e.preventDefault();
-    helperPopup.classList.remove("open");
-    body.classList.remove("noscroll");
+    function closeOnClickHelperForm(e) {
+        e.preventDefault();
+        helperPopup.classList.remove("open");
+        body.classList.remove("noscroll");
+    }
 }
 
 /* Запись к конкретному врачу */
@@ -54,14 +56,15 @@ function doctorItemsHandler(e) {
     helperPopup.classList.remove("open");
 }
 
-const closeDoctorForm = document.querySelectorAll('.popup__close');
+const closeDoctorForm = document.querySelector('.popup__close--doctor');
+if (closeDoctorForm) {
+    closeDoctorForm.addEventListener("click", closeOnClickDoctorForm);
 
-closeDoctorForm.forEach((btnClose) => btnClose.addEventListener("click", closeOnClickDoctorForm));
-
-function closeOnClickDoctorForm(e) {
-    e.preventDefault();
-    doctorPopup.classList.remove("open");
-    body.classList.remove("noscroll");
+    function closeOnClickDoctorForm(e) {
+        e.preventDefault();
+        doctorPopup.classList.remove("open");
+        body.classList.remove("noscroll");
+    }
 }
 
 /* Узнать цены */
@@ -76,11 +79,13 @@ function pricePopupHandler(e) {
     body.classList.toggle("noscroll");
 }
 
-const closePricePopup = document.querySelectorAll('.popup__close');
-closePricePopup.forEach((btnClose) => btnClose.addEventListener("click", closeOnClickPricePopup));
+const closePricePopup = document.querySelector('.popup__close--price-list');
+if (closePricePopup) {
+    closePricePopup.addEventListener("click", closeOnClickPricePopup);
 
-function closeOnClickDoctorForm(e) {
-    e.preventDefault();
-    pricePopup.classList.remove("open");
-    body.classList.remove("noscroll");
+    function closeOnClickPricePopup(e) {
+        e.preventDefault();
+        pricePopup.classList.remove("open");
+        body.classList.remove("noscroll");
+    }
 }

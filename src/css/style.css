@@ -202,8 +202,8 @@ input:active::placeholder {
   background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(229, 172, 142, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0) 80%, rgba(229, 172, 142, 0));
   -webkit-transform: rotateZ(-50deg) translate(5em, -9em);
           transform: rotateZ(-50deg) translate(5em, -9em);
-  -webkit-animation: sheen 4s ease-in-out forwards;
-          animation: sheen 4s ease-in-out forwards;
+  -webkit-animation: sheen 4s ease-in-out;
+          animation: sheen 4s ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
@@ -2465,6 +2465,7 @@ input:active::placeholder {
           animation: pulse .6s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  border-radius: 20px;
 }
 .popup--price-list__title {
   font-weight: 600;
