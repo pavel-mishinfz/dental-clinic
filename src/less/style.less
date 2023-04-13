@@ -1268,7 +1268,10 @@ input:active {
         }
     }
 }
-
+// .owl-item {
+//     width: auto !important;
+//     max-height: 61rem !important;
+// }
 .owl-carousel .owl-nav {
     overflow: hidden;
     height: 0px;
@@ -2208,6 +2211,8 @@ input:active {
 
         & .popup__form {
             width: 46rem;
+            padding-left: 50px;
+            padding-right: 50px;
             animation: pulse .6s;
             animation-fill-mode: forwards;
             margin: 0;
@@ -2364,6 +2369,41 @@ input:active {
         color: #474551;
     }
 }
+
+.b-checkbox {
+    max-width: 30rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__btn {
+        display: none;
+        &+label::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-5px);
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+        }
+        &:checked+label::before {
+            background: url(../img/checkbox-icon.svg) center center no-repeat;
+            background-size: 10px 10px;
+        }
+    }
+    &__label {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #474551;
+        margin-left: 20px;
+        &>span {
+            color: @dark-primary-color;
+        }
+    }
+}
+
 
 @media (max-width: 1700px) {
     .container {
@@ -3500,6 +3540,7 @@ input:active {
     .popup {
         &__header {
             font-size: 2.4em;
+            line-height: 2.6rem;
 
             &--doctor {
                 font-size: 2.2rem;

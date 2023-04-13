@@ -2415,6 +2415,8 @@ input:active::placeholder {
 }
 .popup-feedback .popup__form {
   width: 46rem;
+  padding-left: 50px;
+  padding-right: 50px;
   -webkit-animation: pulse .6s;
           animation: pulse .6s;
   -webkit-animation-fill-mode: forwards;
@@ -2585,6 +2587,44 @@ input:active::placeholder {
   font-size: 1.8rem;
   line-height: 2.2rem;
   color: #474551;
+}
+.b-checkbox {
+  max-width: 30rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.b-checkbox__btn {
+  display: none;
+}
+.b-checkbox__btn + label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+}
+.b-checkbox__btn:checked + label::before {
+  background: url(../img/checkbox-icon.svg) center center no-repeat;
+  background-size: 10px 10px;
+}
+.b-checkbox__label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #474551;
+  margin-left: 20px;
+}
+.b-checkbox__label > span {
+  color: #099dba;
 }
 @media (max-width: 1700px) {
   .container {
@@ -3527,6 +3567,7 @@ input:active::placeholder {
   }
   .popup__header {
     font-size: 2.4em;
+    line-height: 2.6rem;
   }
   .popup__header--doctor {
     font-size: 2.2rem;
