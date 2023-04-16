@@ -9,8 +9,8 @@ class Department extends Model
 {
     use HasFactory;
 
-    public function doctor()
+    public function doctors()
     {
-        return $this->belongsTo(Doctor::class);
+        return $this->belongsToMany(Doctor::class, 'department_doctors', 'department_id', 'doctor_id');
     }
 }

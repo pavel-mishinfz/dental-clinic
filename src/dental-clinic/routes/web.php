@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/**
+* @uses App\Http\Controllers\DoctorController::index
+*/
+
+Route::get('/', function(){
+   return 'Welcome!';
 });

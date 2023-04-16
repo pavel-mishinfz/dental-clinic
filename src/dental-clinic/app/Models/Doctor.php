@@ -9,13 +9,12 @@ class Doctor extends Model
 {
     use HasFactory;
 
-    public function department()
+    public function departments()
     {
-        return $this->hasMany(Department::class);
+        return $this->belongsToMany(Department::class, 'department_doctors', 'doctor_id', 'department_id');
     }
 
-    public function formPatient()
-    {
-        return $this->belongsTo(FormPatient::class, 'formPatient_id');
+    public function form_patients() {
+        return $this->hasMany(FormPatient::class, 'doctor_id', 'id');
     }
 }
