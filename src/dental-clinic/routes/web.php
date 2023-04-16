@@ -13,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/**
-* @uses App\Http\Controllers\DoctorController::index
-*/
-
 Route::get('/', function(){
    return 'Welcome!';
 });
+
+Route::get('/', 'MainController@index')->name('main.index');
+Route::get('/departments', 'DepartmentController@index')->name('department.index');
+Route::get('/doctors', 'DoctorController@index')->name('doctor.index');
+Route::get('/about', 'AboutController@index')->name('about.index');
+Route::get('/contacts', 'ContactController@index')->name('contact.index');
+
+Route::get('/departments/create', 'DepartmentController@create');
+
+Route::get('/doctors/create', 'DoctorController@create');
+Route::get('/doctors/update', 'DoctorController@update');
+
+Route::get('/department_doctors/create', 'DepartmentDoctorsController@create');
