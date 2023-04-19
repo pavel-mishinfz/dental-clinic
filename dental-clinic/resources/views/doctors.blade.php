@@ -15,8 +15,8 @@
                     @foreach($doctors as $doctor)
                     <button class="doctors__preview owl-dot">
                         <p class="doctors__preview-name">
-                            {{$doctor->name}}
                             {{$doctor->surname}}
+                            {{$doctor->name}}
                             {{$doctor->lastname}}
                         </p>
                         <div class="doctors__preview-desc">
@@ -36,11 +36,11 @@
                             @foreach($doctors as $doctor)
                             <div class="doctors__slider-item item">
                                 <img class="doctors__img" src="img/doctors/{{$doctor->image}}"
-                                     alt="Саидов Шамсулло Нарзуллоевич">
+                                     alt="">
                                 <div class="doctors__info">
                                     <p class="doctors__info-name">
-                                        {{$doctor->name}}
                                         {{$doctor->surname}}
+                                        {{$doctor->name}}
                                         {{$doctor->lastname}}
                                     </p>
                                     <p class="doctors__info-specialization">
