@@ -14,19 +14,24 @@
                 <div class="doctors__left owl-dots">
                     @foreach($doctors as $doctor)
                         <button class="doctors__preview owl-dot">
-                            <p class="doctors__preview-name">
-                                {{$doctor->surname}}
-                                {{$doctor->name}}
-                                {{$doctor->lastname}}
-                            </p>
-                            <div class="doctors__preview-desc">
-                                <p class="doctors__preview-prof">
-                                    {{$doctor->position}}
-                                    @if($doctor->experience > 20)
-                                        <span>Ведущий специалист</span>
-                                    @endif
-                                </p>
-                            </div>
+                            <figure>
+                                <img class="doctors__preview-img" src="img/doctors/{{$doctor->icon}}" alt="Иконка врача">
+                                <figcaption>
+                                    <p class="doctors__preview-name">
+                                        {{$doctor->surname}}
+                                        {{$doctor->name}}
+                                        {{$doctor->lastname}}
+                                    </p>
+                                    <div class="doctors__preview-desc">
+                                        <p class="doctors__preview-prof">
+                                            {{$doctor->position}}
+                                            @if($doctor->experience > 20)
+                                                <span>Ведущий специалист</span>
+                                            @endif
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
                         </button>
                     @endforeach
                 </div>
@@ -86,6 +91,7 @@
                             <form class="helpers__form" data-id-department="{{$department->id}}" method="get">
                                 <button type="submit" class="helpers__list-item helpers__list-item--{{substr($department->image, 0, -4)}}">
                                     <h4 class="helpers__h4">{{$department->name}}</h4>
+                                    <img class="helpers__img" src="img/doctors/helpers/{{$department->icon}}" >
                                 </button>
                             </form>
                         @endforeach
@@ -115,9 +121,18 @@
                 nav: true,
                 navText: ["<div class='arrow-slider arrow-prev'></div>", "<div class='arrow-slider arrow-next'></div>"],
                 loop: true,
+                autoWidth: true,
                 dots: true,
-                dotsEach: 1,
+                dotsEach: 6,
                 dotsContainer: '.doctors__left.owl-dots',
+                responsive: {
+                    0: {
+                        autoWidth: false,
+                    },
+                    992: {
+                        autoWidth: true,
+                    }
+                }
             });
         });
     </script>
