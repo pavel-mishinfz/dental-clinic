@@ -1184,52 +1184,15 @@ input:active::placeholder {
   cursor: pointer;
   background-color: #BDF8F9;
 }
-.doctors__preview::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-}
 .doctors__preview:first-child {
   margin-top: 29px;
 }
-.doctors__preview:first-child::before {
-  width: 165px;
-  height: 115px;
-  left: 11px;
-  background: url(../img/doctors/face-icon-1.svg) center center no-repeat;
-}
-.doctors__preview:nth-child(2)::before {
-  width: 174px;
-  height: 115px;
-  left: 7px;
-  background: url(../img/doctors/face-icon-2.svg) center center no-repeat;
-}
-.doctors__preview:nth-child(3)::before {
-  width: 142px;
-  height: 109px;
-  left: 29px;
-  background: url(../img/doctors/face-icon-3.svg) center center no-repeat;
-}
-.doctors__preview:nth-child(4)::before {
-  width: 168px;
-  height: 115px;
-  left: 18px;
-  background: url(../img/doctors/face-icon-4.svg) center center no-repeat;
-}
-.doctors__preview:nth-child(5)::before {
-  width: 132px;
-  height: 115px;
-  left: 36px;
-  background: url(../img/doctors/face-icon-5.svg) center center no-repeat;
-}
-.doctors__preview:last-child {
-  position: relative;
-}
-.doctors__preview:last-child::before {
-  width: 174px;
-  height: 115px;
-  left: 8px;
-  background: url(../img/doctors/face-icon-6.svg) center center no-repeat;
+.doctors__preview-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 150px;
+    height: 100px;
 }
 .doctors__preview:last-child::after {
   content: '';
@@ -1999,30 +1962,12 @@ input:active::placeholder {
   border-radius: 50%;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
-}
-.helpers__list-item--surgery::after {
-  background: url(../img/doctors/helpers/icon-1.svg) center center no-repeat;
   background-color: #BDF8F9;
 }
-.helpers__list-item--therapy::after {
-  background: url(../img/doctors/helpers/icon-2.svg) center center no-repeat;
-  background-color: #BDF8F9;
-}
-.helpers__list-item--orthopedics::after {
-  background: url(../img/doctors/helpers/icon-3.svg) center center no-repeat;
-  background-color: #BDF8F9;
-}
-.helpers__list-item--Implantation::after {
-  background: url(../img/doctors/helpers/icon-4.svg) center center no-repeat;
-  background-color: #BDF8F9;
-}
-.helpers__list-item--orthodontics::after {
-  background: url(../img/doctors/helpers/icon-5.svg) center center no-repeat;
-  background-color: #BDF8F9;
-}
-.helpers__list-item--bleaching::after {
-  background: url(../img/doctors/helpers/icon-6.svg) center center no-repeat;
-  background-color: #BDF8F9;
+.helpers__img {
+    position: absolute;
+    z-index: 5;
+    top: 40%;
 }
 .helpers__h4 {
   font-weight: 600;
@@ -3298,7 +3243,7 @@ input:active::placeholder {
   .doctors__preview-name {
     font-size: 1.8rem;
   }
-  .doctors__preview::before {
+  .doctors__preview-img {
     display: none;
   }
   .doctors__info {
