@@ -26,6 +26,9 @@ Route::get('/contacts', 'ContactController@index')->name('contact.index');
 Route::get('/departments/create', 'DepartmentController@create');
 
 Route::get('/doctors/create', 'DoctorController@create');
-Route::get('/doctors/update', 'DoctorController@update');
 
 Route::get('/department_doctors/create', 'DepartmentDoctorsController@create');
+
+Route::get('/popup/helpers', 'PopupController@helpers');
+Route::get('/popup/doctor', 'PopupController@doctor');
+
