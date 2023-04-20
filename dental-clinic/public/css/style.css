@@ -42,6 +42,10 @@ body {
 body.noscroll {
   overflow: hidden;
 }
+button {
+    background-color: transparent;
+    border: none;
+}
 a {
   text-decoration: none;
   color: #000;
@@ -1957,10 +1961,11 @@ input:active::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
 }
 .helpers__list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   width: 190px;
   min-height: 130px;
   position: relative;
@@ -2065,6 +2070,8 @@ input:active::placeholder {
   row-gap: 60px;
   text-align: left;
   margin: 50px 0;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
   -webkit-animation: fadeInDown .6s;
           animation: fadeInDown .6s;
   -webkit-animation-fill-mode: forwards;
@@ -2178,6 +2185,9 @@ input:active::placeholder {
   bottom: 0px;
   right: 2px;
 }
+.popup__info {
+    text-align: left;
+}
 .popup__info-name {
   font-weight: 500;
   font-size: 2.8rem;
@@ -2197,7 +2207,8 @@ input:active::placeholder {
   color: #474551;
 }
 .popup__desc {
-  width: 100%;
+  text-align: left;
+  width: 80%;
   min-height: 326px;
   padding: 16px 10px 12px 14px;
   background: rgba(243, 254, 254, 0.8);
