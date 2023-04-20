@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Department;
 use App\Models\Doctor;
-use App\Models\FormPatient;
-use App\Models\Patient;
 use Illuminate\Http\Request;
 
 class DoctorController extends Controller
@@ -91,15 +89,5 @@ class DoctorController extends Controller
             Doctor::create($doctor);
         }
         dd('created');
-    }
-
-    public function update() {
-        $doctor = Doctor::find(1);
-
-        $doctor->update([
-            'name' => 'Шамсулло',
-            'surname' => 'Саидов',
-        ]);
-        dd('updated');
     }
 }
