@@ -5,6 +5,9 @@
       !*** ./resources/js/popup.js ***!
       \*******************************/
     /* Интерактив обратной формы связи */
+    let popup_form_tel = document.querySelector('.popup__form-tel');
+    $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
+
     let buttonsFeedback = document.querySelectorAll('.btn--feedback');
     let formFeedback = document.querySelector('.popup-feedback');
     buttonsFeedback.forEach(function (btn) {
@@ -85,6 +88,9 @@
                                         $(document.body).removeClass("noscroll");
                                     };
                                     closeDoctorForm.addEventListener("click", closeOnClickDoctorForm);
+
+                                    popup_form_tel = document.querySelector('.popup__form-tel');
+                                    $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
 
                                     console.log(response.success);
                                 }
