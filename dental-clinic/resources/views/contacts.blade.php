@@ -2,28 +2,21 @@
 @section('content')
     <section class="contacts">
         <div id="map" class="contacts__map"></div>
-        <div class="contacts__map contacts__map--popup">
-            <button class="popup__close popup__close--map">&times;</button>
-        </div>
         <div class="container">
             <div class="contacts__block">
                 <h3 class="contacts__h3">Контакты</h3>
                 <address class="contacts__address">
                     г. Коломна, ул. Октябрьской революции д. 161
                 </address>
-                <div class="contacts__route">
-                    <p id="route" class="contacts__route-text" >Проложить маршрут</p>
-                    <img src="img/contacts/icon-mark.svg" alt="Метка местоположения" class="contacts__route-img">
-                </div>
                 <div class="contacts__time">
                     <p class="contacts__time-text">
                         с 9:00 до 21:00 <span>последняя запись до 19:00</span>
                     </p>
                 </div>
                 <div class="contacts__phone">
-                    +7 (496) 614-15-15
-                    +7 (926) 025-57-67
-                    +7 (985) 025-55-66
+                    <a href="tel:+74966141515">+7 (496) 614-15-15</a>
+                    <a href="tel:+79260255767">+7 (926) 025-57-67</a>
+                    <a href="tel:+79850255566">+7 (985) 025-55-66</a>
                 </div>
                 <div class="contacts__messenger">
                     <div class="contacts__messenger-icon">
