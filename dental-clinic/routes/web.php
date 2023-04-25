@@ -13,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-   return 'Welcome!';
-});
-
 Route::get('/', 'MainController@index')->name('main.index');
 Route::get('/departments', 'DepartmentController@index')->name('department.index');
 Route::get('/doctors', 'DoctorController@index')->name('doctor.index');
@@ -31,4 +27,7 @@ Route::get('/department_doctors/create', 'DepartmentDoctorsController@create');
 
 Route::get('/popup/helpers', 'PopupController@helpers');
 Route::get('/popup/doctor', 'PopupController@doctor');
+
+Route::post('/feedback-form', 'FeedbackController@store');
+Route::get('/reload', 'FeedbackController@reload');
 
