@@ -40,22 +40,5 @@ function init() {
   });
   map.geoObjects.add(placemark);
 }
-var mapPopupClose = document.querySelector('.popup__close--map');
-var map = document.querySelector('.contacts__map');
-var mapPopup = document.querySelector('.contacts__map--popup');
-var route = document.querySelector('#route');
-console.log(route);
-route.addEventListener("click", function (e) {
-  e.preventDefault();
-  map.style.cssText = 'display: block; position: fixed; transform: translateY(25%); z-index: 100; height: 70%;';
-  mapPopup.style.cssText = 'display: block;';
-  document.body.style.cssText = 'overflow: hidden;';
-});
-mapPopupClose.addEventListener("click", function (e) {
-  e.preventDefault();
-  map.style.cssText = 'position: absolute; transform: none; z-index: none; height: 100%;';
-  mapPopup.style.cssText = 'display: none;';
-  document.body.style.cssText = 'overflow: none;';
-});
 /******/ })()
 ;
