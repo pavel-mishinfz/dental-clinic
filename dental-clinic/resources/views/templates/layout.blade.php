@@ -115,16 +115,28 @@
     <div class="dm-table">
         <div class="dm-cell">
             <div class="dm-modal">
-                <button class="popup__close popup__close--feedback">&times;</button>
-                <form action="" class="popup__form" method="post">
+                <form id="popup__form-feedback" class="popup__form" method="post">
+                    <button class="popup__close popup__close--feedback">&times;</button>
+                    @csrf
                     <p class="popup__form-title">
                         Напишите ваши контактные данные и наши менеджеры свяжуться с вами в ближайшее время
                     </p>
-                    <input class="popup__form-name" type="text" placeholder="Имя" maxlength="30" required>
-                    <input class="popup__form-tel" type="tel" placeholder="Телефон" maxlength="11" required>
+                    <input class="popup__form-name" name="name" type="text" placeholder="Имя" value="{{ old('name') }}">
+                    <input class="popup__form-surname" name="surname" type="text" placeholder="Фамилия" value="{{ old('surname') }}">
+                    <input class="popup__form-lastname" name="lastname" type="text" placeholder="Отчество" value="{{ old('lastname') }}">
+                    <input class="popup__form-tel" name="phone" type="tel" placeholder="Телефон" value="{{ old('phone') }}">
+                    <div class="b-captcha">
+                        <span id="b-captcha__img">{!! captcha_img() !!}</span>
+                        <button id="b-captcha__reload"><img src="img/reload.svg" alt="Обновить"></button>
+                    </div>
+                    <input class="popup__form-captcha" name="captcha" type="text">
                     <div class="b-checkbox">
-                        <input class="b-checkbox__btn" type="checkbox" name="personal-data" id="personal-data">
+                        <input class="b-checkbox__btn" type="checkbox" name="checkbox" id="personal-data" checked>
                         <label class="b-checkbox__label" for="personal-data">Я согласен на обработку моих <span>персональных данных</span></label>
+                    </div>
+                    <div class="success">
+                        <div class="success-msg"></div>
+                        <button class="success-close">&times;</button>
                     </div>
                     <button type="submit" class="btn btn--popup-form">Записаться</button>
                 </form>
@@ -141,6 +153,8 @@
     src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
     crossorigin="anonymous"></script>
+<script src="Inputmask-5.x/dist/inputmask.js"></script>
+<script src="Inputmask-5.x/dist/jquery.inputmask.js"></script>
 
 @yield('slider-js')
 
@@ -152,6 +166,46 @@
 @yield('slider-doctor')
 
 @yield('slider-about')
+
+<script src="js/captcha.js"></script>
+<script>
+    $(document).on('click', '.btn--popup-form', function (e) {
+        e.preventDefault();
+        $('#b-captcha__reload').click();
+
+        let errors_msg = document.querySelectorAll('.error');
+        $(errors_msg).each(function () {
+            $(this) != null ? $(this).remove() : null;
+        });
+
+        $.ajax({
+            type: 'POST',
+            url: '/feedback-form',
+            data: $('#popup__form-feedback').serialize(),
+            success: function (response) {
+                $('.success').addClass('submitted');
+                $('.success-msg').html(response.success);
+            },
+            error: function (data) {
+                if (data.status == 422) {
+                    $.each(data.responseJSON.errors, function (name, error) {
+                        let input = $(document).find('[name="' + name + '"]');
+                        if (name == 'checkbox') {
+                            input.parent().after($('<span class="error" style="color: red;">' + error[0] + '</span>'));
+                        } else {
+                            input.after($('<span class="error" style="color: red;">' + error[0] + '</span>'));
+                        }
+                    });
+                }
+            }
+        });
+
+        $('.success-close').click(function(e) {
+            e.preventDefault();
+            $('.success').removeClass('submitted');
+        });
+    });
+</script>
 
 </body>
 
