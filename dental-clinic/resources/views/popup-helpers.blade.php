@@ -1,8 +1,8 @@
 <div class="dm-table">
     <div class="dm-cell">
         <div class="dm-modal">
-            <button class="popup__close popup__close--helpers">&times;</button>
             <div class="container popup__container">
+                <button class="popup__close popup__close--helpers">&times;</button>
                 <p class="popup__header">
                     Можете выбрать профильного врача, специализирующегося на <span>{{$department_name}}</span>
                 </p>
