@@ -259,42 +259,11 @@
                 </h3>
             </div>
             <div class="license__slider owl-carousel owl-theme">
+                @foreach($licenses as $license)
                 <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-1.png" alt="Лицензия">
+                    <img class="license__img" src="img/about/license/{{$license->image}}" alt="Лицензия">
                 </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-1.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-1.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-2.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-3.png" alt="Лицензия">
-                </div>
-                <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/img-license-4.png" alt="Лицензия">
-                </div>
+                @endforeach
             </div>
             <div class="license__slider-dots">
                 <ul class="owl-dots owl-dots--license">
