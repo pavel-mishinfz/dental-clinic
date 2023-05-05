@@ -11,9 +11,9 @@
             </div>
 
             <div class="doctors__wrap">
-                <div class="doctors__left owl-dots">
+                <ul class="doctors__left owl-dots">
                     @foreach($doctors as $doctor)
-                        <button class="doctors__preview owl-dot">
+                        <li class="doctors__preview owl-dot">
                             <figure>
                                 <img class="doctors__preview-img" src="img/doctors/{{$doctor->icon}}" alt="Иконка врача">
                                 <figcaption>
@@ -32,14 +32,14 @@
                                     </div>
                                 </figcaption>
                             </figure>
-                        </button>
+                        </li>
                     @endforeach
-                </div>
+                </ul>
                 <div class="doctors__right">
                     <div class="doctors__wrap-slider">
                         <div class="doctors__slider owl-carousel owl-theme">
                             @foreach($doctors as $doctor)
-                                <div class="doctors__slider-item item">
+                                <div class="doctors__slider-item item" style="width: 100%">
                                     <img class="doctors__img" src="img/doctors/{{$doctor->image}}"
                                          alt="">
                                     <div class="doctors__info">
@@ -122,9 +122,10 @@
                 navText: ["<div class='arrow-slider arrow-prev'></div>", "<div class='arrow-slider arrow-next'></div>"],
                 loop: true,
                 autoWidth: true,
+                dotsData: true,
                 dots: true,
                 dotsEach: 6,
-                dotsContainer: '.doctors__left.owl-dots',
+                dotsContainer: '.doctors__left',
                 responsive: {
                     0: {
                         autoWidth: false,
@@ -134,6 +135,11 @@
                     }
                 }
             });
+
+            $('.owl-dot').click(function () {
+                $('.doctors__slider').trigger('to.owl.carousel', [$(this).index(), 300]);
+            });
+
         });
     </script>
 @endsection
