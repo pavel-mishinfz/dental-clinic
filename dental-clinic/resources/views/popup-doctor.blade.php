@@ -1,7 +1,7 @@
 <div class="dm-table">
     <div class="dm-cell">
-        <div class="dm-modal">
-            <div class="container popup__container popup__container--popup">
+        <div class="dm-modal dm-modal--doctor" data-doctor-id="{{$doctor->id}}">
+            <div class="container popup__container">
                 <button class="popup__close popup__close--doctor">&times;</button>
                 <p class="popup__header popup__header--doctor">
                     <span>Вы выбрали</span> <span>{{$doctor->surname}} {{$doctor->name}} {{$doctor->lastname}}</span>. Поздравляем,
@@ -74,10 +74,10 @@
                     </div>
                 </div>
                 <div class="popup__footer popup__footer--doctor">
-                    <a href="" class="popup__footer-other">
+                    <a href="{{route('doctor.index')}}" class="popup__footer-other">
                         Хотите выбрать другого специалиста?
                     </a>
-                    <a href="" class="popup__footer-refresh">
+                    <a href="{{route('main.index')}}" class="popup__footer-refresh">
                         На главную
                     </a>
                 </div>
@@ -85,4 +85,3 @@
         </div>
     </div>
 </div>
-

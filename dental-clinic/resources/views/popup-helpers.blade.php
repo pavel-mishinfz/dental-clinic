@@ -45,10 +45,10 @@
                     @endforeach
                 </div>
                 <div class="popup__footer">
-                    <a href="" class="popup__footer-other">
+                    <a href="{{route('doctor.index')}}" class="popup__footer-other">
                         Хотите выбрать другую услугу?
                     </a>
-                    <a href="" class="popup__footer-refresh">
+                    <a href="{{route('main.index')}}" class="popup__footer-refresh">
                         На главную
                     </a>
                 </div>
