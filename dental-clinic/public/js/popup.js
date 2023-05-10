@@ -1,9 +1,4 @@
-/******/
-(() => { // webpackBootstrap
-    let __webpack_exports__ = {};
-    /*!*******************************!*\
-      !*** ./resources/js/popup.js ***!
-      \*******************************/
+$(document).ready(function(){
     /* Интерактив обратной формы связи */
     let popup_form_tel = document.querySelector('.popup__form-tel');
     $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
@@ -27,80 +22,73 @@
         e.preventDefault();
         formFeedback.classList.remove("open");
         document.body.classList.remove("noscroll");
+        $('.success').removeClass('submitted');
     }
 
     /* Интерактив электронного помощника */
-    let helpersForms = document.querySelectorAll('.helpers__form');
     let popupHelpers = document.querySelector('.popup--helpers');
+    let id;
 
-    $(helpersForms).each(function () {
-        $(this).on('submit', function (e) {
-            e.preventDefault();
+    $(document).on('click', '.helpers__form', function(e){
+        e.preventDefault();
+        id = $(this).data('id-department');
 
-            let id = $(this).data('id-department');
+        $.ajax({
+            url: "/doctors/helper/" + id,
+            type: "GET",
+            success: function (response) {
+                $('.popup--helpers').html(response.tmp);
 
-            $.ajax({
-                url: "/popup/helpers",
-                type: "GET",
-                data: {
-                    id: id,
-                },
-                success: function (response) {
-                    $('.popup--helpers').html(response.tmp);
+                $(popupHelpers).addClass("open");
+                $(document.body).addClass("noscroll");
 
-                    $(popupHelpers).addClass("open");
-                    $(document.body).addClass("noscroll");
+                let closeHelperForm = document.querySelector('.popup__close--helpers');
+                let closeOnClickHelperForm = function closeOnClickHelperForm(e) {
+                    e.preventDefault();
+                    $(popupHelpers).removeClass("open");
+                    $(document.body).removeClass("noscroll");
+                    $('.popup--helpers').html("");
+                };
+                closeHelperForm.addEventListener("click", closeOnClickHelperForm);
 
-                    let closeHelperForm = document.querySelector('.popup__close--helpers');
-                    let closeOnClickHelperForm = function closeOnClickHelperForm(e) {
-                        e.preventDefault();
-                        $(popupHelpers).removeClass("open");
-                        $(document.body).removeClass("noscroll");
-                    };
-                    closeHelperForm.addEventListener("click", closeOnClickHelperForm);
+                console.log(response.success);
+            },
+        });
+    });
 
-                    /* Запись к конкретному врачу */
-                    let doctorForms = document.querySelectorAll('.popup__form-doctor');
-                    let doctorPopup = document.querySelector('.popup--doctor');
+    /* Запись к конкретному врачу */
+    let doctorPopup = document.querySelector('.popup--doctor');
 
-                    $(doctorForms).each(function(){
-                        $(this).on('submit', function (e){
-                            e.preventDefault();
+    $(document).on('click', '.popup__form-doctor', function(e) {
+        e.preventDefault();
 
-                            id = $(this).data('id-doctor');
+        id = $(this).data('id-doctor');
 
-                            $.ajax({
-                                url: "/popup/doctor",
-                                type: "GET",
-                                data: {
-                                    id: id,
-                                },
-                                success: function (response) {
-                                    $('.popup--doctor').html(response.tmp);
+        $.ajax({
+            url: "/doctors/doctor/" + id,
+            type: "GET",
+            success: function (response) {
+                $('.popup--doctor').html(response.tmp);
 
-                                    $(doctorPopup).addClass("open");
-                                    $(popupHelpers).removeClass("open");
+                $(doctorPopup).addClass("open");
+                $(popupHelpers).removeClass("open");
 
-                                    let closeDoctorForm = document.querySelector('.popup__close--doctor');
-                                    let closeOnClickDoctorForm = function closeOnClickDoctorForm(e) {
-                                        e.preventDefault();
-                                        $(doctorPopup).removeClass("open");
-                                        $(document.body).removeClass("noscroll");
-                                    };
-                                    closeDoctorForm.addEventListener("click", closeOnClickDoctorForm);
+                let closeDoctorForm = document.querySelector('.popup__close--doctor');
+                let closeOnClickDoctorForm = function closeOnClickDoctorForm(e) {
+                    e.preventDefault();
+                    $(doctorPopup).removeClass("open");
+                    $(document.body).removeClass("noscroll");
+                    $('.popup--doctor').html("");
+                    $('.popup--helpers').html("");
+                    $('.success').removeClass('submitted');
+                };
+                closeDoctorForm.addEventListener("click", closeOnClickDoctorForm);
 
-                                    popup_form_tel = document.querySelector('.popup__form-tel');
-                                    $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
+                popup_form_tel = document.querySelector('.popup__form-tel');
+                $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
 
-                                    console.log(response.success);
-                                }
-                            });
-                        });
-                    });
-
-                    console.log(response.success);
-                },
-            });
+                console.log(response.success);
+            }
         });
     });
 
@@ -126,6 +114,4 @@
         };
         closePricePopup.addEventListener("click", closeOnClickPricePopup);
     }
-    /******/
-})()
-;
+});
