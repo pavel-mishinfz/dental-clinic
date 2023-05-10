@@ -89,7 +89,7 @@
                     <div class="helpers__list">
                         @foreach($departments as $department)
                             <form class="helpers__form" data-id-department="{{$department->id}}" method="get">
-                                <button type="submit" class="helpers__list-item helpers__list-item--{{substr($department->image, 0, -4)}}">
+                                <button class="helpers__list-item helpers__list-item--{{substr($department->image, 0, -4)}}">
                                     <h4 class="helpers__h4">{{$department->name}}</h4>
                                     <img class="helpers__img" src="img/doctors/helpers/{{$department->icon}}" >
                                 </button>
@@ -101,11 +101,13 @@
         </div>
     </section>
 @endsection
-@section('popup--doctor')
+
+@section('popup--doctors')
     <div class="popup popup--helpers"></div>
 
     <div class="popup popup--doctor"></div>
 @endsection
+
 @section('slider-css')
     <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.min.css">
@@ -121,19 +123,10 @@
                 nav: true,
                 navText: ["<div class='arrow-slider arrow-prev'></div>", "<div class='arrow-slider arrow-next'></div>"],
                 loop: true,
-                autoWidth: true,
                 dotsData: true,
                 dots: true,
                 dotsEach: 6,
                 dotsContainer: '.doctors__left',
-                responsive: {
-                    0: {
-                        autoWidth: false,
-                    },
-                    992: {
-                        autoWidth: true,
-                    }
-                }
             });
 
             $('.owl-dot').click(function () {
