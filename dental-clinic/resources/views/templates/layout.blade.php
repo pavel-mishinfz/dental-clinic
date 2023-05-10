@@ -92,7 +92,7 @@
     </div>
 </footer>
 
-@yield('popup--doctor')
+@yield('popup--doctors')
 
 <div class="menu" id="menu">
     <div class="menu__container">
@@ -138,7 +138,7 @@
                         <div class="success-msg"></div>
                         <button class="success-close">&times;</button>
                     </div>
-                    <button type="submit" class="btn btn--popup-form">Записаться</button>
+                    <button type="submit" class="btn btn--popup-form">Отправить</button>
                 </form>
             </div>
         </div>
@@ -168,44 +168,7 @@
 @yield('slider-about')
 
 <script src="js/captcha.js"></script>
-<script>
-    $(document).on('click', '.btn--popup-form', function (e) {
-        e.preventDefault();
-        $('#b-captcha__reload').click();
-
-        let errors_msg = document.querySelectorAll('.error');
-        $(errors_msg).each(function () {
-            $(this) != null ? $(this).remove() : null;
-        });
-
-        $.ajax({
-            type: 'POST',
-            url: '/feedback-form',
-            data: $('#popup__form-feedback').serialize(),
-            success: function (response) {
-                $('.success').addClass('submitted');
-                $('.success-msg').html(response.success);
-            },
-            error: function (data) {
-                if (data.status == 422) {
-                    $.each(data.responseJSON.errors, function (name, error) {
-                        let input = $(document).find('[name="' + name + '"]');
-                        if (name == 'checkbox') {
-                            input.parent().after($('<span class="error" style="color: red;">' + error[0] + '</span>'));
-                        } else {
-                            input.after($('<span class="error" style="color: red;">' + error[0] + '</span>'));
-                        }
-                    });
-                }
-            }
-        });
-
-        $('.success-close').click(function(e) {
-            e.preventDefault();
-            $('.success').removeClass('submitted');
-        });
-    });
-</script>
+<script src="js/feedback.js"></script>
 
 </body>
 
