@@ -245,7 +245,7 @@
                 </ul>
             </div>
             <div class="reviews__feedback">
-                <a class="reviews__feedback-title" href="">Оставить отзыв</a>
+                <p class="reviews__feedback-title">Оставить отзыв</p>
                 <a href=""><img src="img/VK.svg" alt="Иконка Вконтакте" class="reviews__feedback-icon"></a>
             </div>
         </div>
