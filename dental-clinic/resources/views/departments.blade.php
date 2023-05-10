@@ -125,7 +125,7 @@
                     </div>
                     <div class="hygiene__btns">
                         <button class="btn btn--hygiene btn--feedback">Записаться</button>
-                        <button class="btn btn--hygiene-select">Выбрать врача</button>
+                        <a href="{{route('doctor.index')}}"><button class="btn btn--hygiene-select">Выбрать врача</button></a>
                     </div>
                 </div>
             </div>
@@ -137,8 +137,8 @@
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
-                    <button class="popup__close popup__close--price-list">&times;</button>
                     <div class="popup--price-list__container">
+                        <button class="popup__close popup__close--price-list">&times;</button>
                         <p class="popup--price-list__title">
                             Скачайте прайс-лист и ознакомьтесь с ценами
                         </p>
