@@ -9,6 +9,8 @@ class Patient extends Model
 {
     use HasFactory;
 
+    protected $guarded = false;
+
     public function form_patients() {
         return $this->hasMany(FormPatient::class, 'patient_id', 'id');
     }
