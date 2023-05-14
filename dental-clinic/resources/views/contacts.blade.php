@@ -35,20 +35,32 @@
 
     <section class="free">
         <div class="container">
-            <form action="" class="popup__form free__form" method="post">
+            <form class="popup__form free__form" method="post">
                 <h5 class="free__form-h5">
                     Запишитесь на бесплатную первичную консультацию и диагностику зубов
                 </h5>
                 <p class="popup__form-title free__form-title">
                     В ходе консультации вы получите 2-3 плана качественного лечения под ваш бюджет
                 </p>
-                <input class="popup__form-name" type="text" placeholder="Имя" maxlength="30" required>
-                <input class="popup__form-tel" type="tel" placeholder="Телефон" maxlength="11" required>
+                @csrf
+                <input class="popup__form-name" name="name" type="text" placeholder="Имя" value="{{ old('name') }}">
+                <input class="popup__form-surname" name="surname" type="text" placeholder="Фамилия" value="{{ old('surname') }}">
+                <input class="popup__form-lastname" name="lastname" type="text" placeholder="Отчество" value="{{ old('lastname') }}">
+                <input class="popup__form-tel" name="phone" type="tel" placeholder="Телефон" value="{{ old('phone') }}">
+                <div class="b-captcha">
+                    <span id="b-captcha__img--free">{!! captcha_img() !!}</span>
+                    <button id="b-captcha__reload" class="b-captcha__reload--free"><img src="img/reload.svg" alt="Обновить"></button>
+                </div>
+                <input class="popup__form-captcha" name="captcha" type="text">
                 <div class="b-checkbox">
-                    <input class="b-checkbox__btn" type="checkbox" name="personal-data" id="personal-data">
+                    <input class="b-checkbox__btn" type="checkbox" name="checkbox" id="personal-data" checked>
                     <label class="b-checkbox__label" for="personal-data">Я согласен на обработку моих <span>персональных данных</span></label>
                 </div>
-                <button type="submit" class="btn btn--popup-form">Записаться</button>
+                <div class="success">
+                    <div class="success-msg"></div>
+                    <button class="success-close">&times;</button>
+                </div>
+                <button type="submit" class="btn btn--popup-form btn--form-free">Записаться</button>
             </form>
         </div>
     </section>
