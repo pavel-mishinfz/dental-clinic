@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @yield('csrf');
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    @yield('review-css')
     <title>{{$title}}</title>
 </head>
 
@@ -153,8 +155,10 @@
     src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
     crossorigin="anonymous"></script>
-<script src="Inputmask-5.x/dist/inputmask.js"></script>
-<script src="Inputmask-5.x/dist/jquery.inputmask.js"></script>
+<script src="js/inputmask/inputmask.js"></script>
+<script src="js/inputmask/jquery.inputmask.js"></script>
+
+@yield('review-js')
 
 @yield('slider-js')
 
