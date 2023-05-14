@@ -1,6 +1,6 @@
 $(document).ready(function(){
     /* Интерактив обратной формы связи */
-    let popup_form_tel = document.querySelector('.popup__form-tel');
+    let popup_form_tel = document.querySelectorAll('.popup__form-tel');
     $(popup_form_tel).inputmask({"mask": "+7(999)999-99-99"});
 
     let buttonsFeedback = document.querySelectorAll('.btn--feedback');
@@ -16,13 +16,38 @@ $(document).ready(function(){
     }
 
     let closeFeedbackForm = document.querySelector('.popup__close--feedback');
-    closeFeedbackForm.addEventListener("click", closeOnClickForm);
+    closeFeedbackForm.addEventListener("click", closeOnClickFeedbackForm);
 
-    function closeOnClickForm(e) {
+    function closeOnClickFeedbackForm(e) {
         e.preventDefault();
         formFeedback.classList.remove("open");
         document.body.classList.remove("noscroll");
         $('.success').removeClass('submitted');
+    }
+
+    /* Интерактив отзывов */
+    let btnReviewAdd = document.querySelectorAll('.reviews__feedback-add');
+    let formReview = document.querySelector('.popup-review');
+    btnReviewAdd.forEach(function (btn) {
+        return btn.addEventListener("click", formReviewHandler);
+    });
+
+    function formReviewHandler(e) {
+        e.preventDefault();
+        formReview.classList.toggle("open");
+        document.body.classList.toggle("noscroll");
+    }
+
+    let closeReviewForm = document.querySelector('.popup__close--review');
+    if(closeReviewForm) {
+        closeReviewForm.addEventListener("click", closeOnClickReviewForm);
+
+        function closeOnClickReviewForm(e) {
+            e.preventDefault();
+            formReview.classList.remove("open");
+            document.body.classList.remove("noscroll");
+            $('.success').removeClass('submitted');
+        }
     }
 
     /* Интерактив электронного помощника */
