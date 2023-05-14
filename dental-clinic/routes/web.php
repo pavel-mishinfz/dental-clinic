@@ -30,3 +30,6 @@ Route::get('/department_doctors/create', 'DepartmentDoctorsController@create');
 Route::post('/feedback-form', 'FeedbackController@store');
 Route::get('/reload', 'FeedbackController@reload');
 
+Route::get('/reviews', 'ReviewController@index')->name('review.index');
+Route::post('/image-resize', 'ReviewController@imageResize');
+Route::post('/review-send', 'ReviewController@store');
