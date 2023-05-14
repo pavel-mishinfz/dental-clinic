@@ -1,16 +1,20 @@
 $(document).on('click', '.btn--popup-form', function (e) {
     e.preventDefault();
-    $('#b-captcha__reload').click();
 
     let errors_msg = document.querySelectorAll('.error');
     $(errors_msg).each(function () {
         $(this) != null ? $(this).remove() : null;
     });
 
+    let feedbackForm;
+    $(this).hasClass('btn--form-free') ? feedbackForm = $('.free__form') : feedbackForm = $('#popup__form-feedback');
+
+    let captcha = feedbackForm.find('#b-captcha__reload');
+    $(captcha).click();
+
     let doctor_id = document.querySelector('.dm-modal--doctor');
     doctor_id ? doctor_id = doctor_id.dataset.doctorId : doctor_id = '';
-    let data = $('#popup__form-feedback').serialize() + '&doctorId=' + doctor_id;
-    console.log(data);
+    let data = feedbackForm.serialize() + '&doctorId=' + doctor_id;
 
     $.ajax({
         type: 'POST',
@@ -19,12 +23,12 @@ $(document).on('click', '.btn--popup-form', function (e) {
         success: function (response) {
             $('.success').addClass('submitted');
             $('.success-msg').html(response.success);
-            $('#popup__form-feedback')[0].reset();
+            feedbackForm[0].reset();
         },
         error: function (data) {
             if (data.status == 422) {
                 $.each(data.responseJSON.errors, function (name, error) {
-                    let input = $(document).find('[name="' + name + '"]');
+                    let input = feedbackForm.find('[name="' + name + '"]');
                     if (name == 'checkbox') {
                         input.parent().after($('<span class="error" style="color: red;">' + error[0] + '</span>'));
                     } else {
