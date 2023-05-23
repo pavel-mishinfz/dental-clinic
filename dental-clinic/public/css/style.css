@@ -2706,6 +2706,7 @@ textarea:active::placeholder {
     font-size: 2rem;
     font-weight: 700;
     padding: 15px 0;
+    max-width: 30rem;
     width: 100%;
     color: white;
     background-color: #046dbf;
@@ -2717,7 +2718,7 @@ textarea:active::placeholder {
     content: '';
     position: absolute;
     top: 50%;
-    transform: translateY(-10px);
+    transform: translate(-10px, -10px);
     left: 50px;
     width: 20px;
     height: 20px;
@@ -2795,8 +2796,6 @@ textarea:active::placeholder {
 
 .popup-review .popup__form {
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
     -webkit-animation: pulse .6s;
     animation: pulse .6s;
     -webkit-animation-fill-mode: forwards;
@@ -4431,7 +4430,8 @@ textarea:active::placeholder {
         padding-right: 0;
     }
 
-    .btn--popup-form {
+    .btn--popup-form,
+    .btn--review-send {
         width: 80%;
         max-width: 100%;
         padding-left: 0;
@@ -4464,6 +4464,15 @@ textarea:active::placeholder {
     .popup__footer-other,
     .popup__footer-refresh {
         font-size: 1.4rem;
+    }
+
+    .popup__form-file + label {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .popup__form-file + label::before {
+        background-image: none;
     }
 }
 
