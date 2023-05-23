@@ -1,9 +1,4 @@
 {
-    "/js/hamb-menu.js": "/js/hamb-menu.js",
-    "/js/observer.js": "/js/observer.js",
-    "/js/popup.js": "/js/popup.js",
-    "/js/ymaps.js": "/js/ymaps.js",
-    "/css/normalize.css": "/css/normalize.css",
-    "/css/style.css": "/css/style.css",
-    "/css/fonts.css": "/css/fonts.css"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css"
 }
