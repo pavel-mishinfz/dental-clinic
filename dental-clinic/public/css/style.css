@@ -42,7 +42,6 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 body.noscroll {
@@ -365,7 +364,7 @@ textarea:active::placeholder {
 
 .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 40%;
     height: 100vh;
@@ -4269,6 +4268,16 @@ textarea:active::placeholder {
 }
 
 @media (max-width: 480px) {
+    .popup__close {
+        border: none;
+        background-color: transparent;
+    }
+
+    .menu__close {
+        border: none;
+        font-size: 4rem;
+    }
+
     .logo__title {
         display: none;
     }
