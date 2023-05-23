@@ -4474,6 +4474,10 @@ textarea:active::placeholder {
     .popup__form-file + label::before {
         background-image: none;
     }
+
+    .success.submitted {
+        width: 80%;
+    }
 }
 
 @media (max-width: 320px) {
