@@ -9,6 +9,8 @@ class FormPatient extends Model
 {
     use HasFactory;
 
+    protected $guarded = false;
+
     public function patient() {
         return $this->belongsTo(Patient::class, 'patient_id', 'id');
     }
