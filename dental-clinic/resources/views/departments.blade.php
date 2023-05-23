@@ -52,7 +52,8 @@
                                 Посмотрите видео о технологии
                             </p>
                             <div class="hygiene__video-play">
-                                <video src="video/demo.mp4">
+                                <video controls="controls">
+                                    <source src="{{asset('video/demo.mp4')}}" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -89,7 +90,7 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="btn btn--hygiene btn--medium">Узнать цены</button>
+                    <button class="btn btn--hygiene btn--price btn--medium">Узнать цены</button>
                 </div>
                 <div class="hygiene__bottom">
                     <div class="hygiene__wrap-step">
