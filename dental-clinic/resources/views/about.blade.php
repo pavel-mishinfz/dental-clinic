@@ -3,9 +3,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('review-css')
-    <link rel="stylesheet" href="css/croppie/croppie.css" />
-    <link rel="stylesheet" href="css/arcticmodal/jquery.arcticmodal.css" />
-    <link rel="stylesheet" href="css/arcticmodal/themes/simple.css" />
+    <link rel="stylesheet" href="{{asset('css/croppie/croppie.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/arcticmodal/jquery.arcticmodal.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/arcticmodal/themes/simple.css')}}" />
 @endsection
 @section('content')
     <section class="about">
@@ -40,34 +40,34 @@
                 </div>
                 <div class="about__right">
                     <div class="about__b-img">
-                        <img class="about__img" src="img/about/about-img.jpg" alt="Фото кабинета клиники">
+                        <img class="about__img" src="{{asset('img/about/about-img.jpg')}}" alt="Фото кабинета клиники">
                     </div>
                 </div>
             </div>
             <div class="about__slider owl-carousel owl-theme">
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-1.png" alt="">
+                    <img src="{{asset('img/about/img-slider-1.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-2.png" alt="">
+                    <img src="{{asset('img/about/img-slider-2.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-3.png" alt="">
+                    <img src="{{asset('img/about/img-slider-3.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-4.png" alt="">
+                    <img src="{{asset('img/about/img-slider-4.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-1.png" alt="">
+                    <img src="{{asset('img/about/img-slider-1.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-2.png" alt="">
+                    <img src="{{asset('img/about/img-slider-2.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-3.png" alt="">
+                    <img src="{{asset('img/about/img-slider-3.png')}}" alt="">
                 </div>
                 <div class="about__slider-item item">
-                    <img src="img/about/img-slider-4.png" alt="">
+                    <img src="{{asset('img/about/img-slider-4.png')}}" alt="">
                 </div>
             </div>
             <div class="about__slider-dots">
@@ -89,7 +89,7 @@
                 @foreach($reviews as $review)
                     <article class="reviews__slider-item item">
                         <div class="reviews__slider-item-content">
-                            <img src="upload/{{$review->img}}" alt="Пользователь" class="reviews__img">
+                            <img src="{{asset('upload') . '/' . $review->img}}" alt="Пользователь" class="reviews__img">
                             <div class="reviews__desc">
                                 <p class="reviews__desc-name">
                                     {{$review->name}}
@@ -114,7 +114,7 @@
                 <p class="reviews__feedback-title reviews__feedback-add">Оставить отзыв</p>
                 <span>|</span>
                 <a class="reviews__show-all" href="{{route('review.index')}}">Показать все</a>
-                <a href=""><img src="img/VK.svg" alt="Иконка Вконтакте" class="reviews__feedback-icon"></a>
+                <a href=""><img src="{{asset('img/VK.svg')}}" alt="Иконка Вконтакте" class="reviews__feedback-icon"></a>
             </div>
         </div>
     </section>
@@ -129,7 +129,7 @@
             <div class="license__slider owl-carousel owl-theme">
                 @foreach($licenses as $license)
                 <div class="license__slider-item item">
-                    <img class="license__img" src="img/about/license/{{$license->image}}" alt="Лицензия">
+                    <img class="license__img" src="{{asset('img/about/license') . '/' . $license->image}}" alt="Лицензия">
                 </div>
                 @endforeach
             </div>
@@ -158,7 +158,7 @@
                         <img id="user-photo" src="upload/user-photo.png">
                         <div class="b-captcha">
                             <span id="b-captcha__img">{!! captcha_img() !!}</span>
-                            <button id="b-captcha__reload"><img src="img/reload.svg" alt="Обновить"></button>
+                            <button id="b-captcha__reload"><img src="{{asset('img/reload.svg')}}" alt="Обновить"></button>
                         </div>
                         <input class="popup__form-captcha" name="captcha" type="text">
                         <div class="success">
@@ -186,11 +186,11 @@
 
 @endsection
 @section('slider-css')
-    <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('owlCarousel/assets/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('owlCarousel/assets/owl.theme.default.min.css')}}">
 @endsection
 @section('slider-js')
-    <script src="owlCarousel/owl.carousel.min.js"></script>
+    <script src="{{asset('owlCarousel/owl.carousel.min.js')}}"></script>
 @endsection
 @section('slider-about')
     <script>
@@ -256,8 +256,8 @@
     </script>
 @endsection
 @section('review-js')
-    <script src="js/croppie/croppie.js"></script>
-    <script src="js/arcticmodal/jquery.arcticmodal.js"></script>
-    <script src="js/image-crop.js"></script>
-    <script src="js/review.js"></script>
+    <script src="{{asset('js/croppie/croppie.js')}}"></script>
+    <script src="{{asset('js/arcticmodal/jquery.arcticmodal.js')}}"></script>
+    <script src="{{asset('js/image-crop.js')}}"></script>
+    <script src="{{asset('js/review.js')}}"></script>
 @endsection

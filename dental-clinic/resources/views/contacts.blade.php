@@ -20,13 +20,13 @@
                 </div>
                 <div class="contacts__messenger">
                     <div class="contacts__messenger-icon">
-                        <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                        <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                        <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                        <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
                     </div>
                     <p class="contacts__messenger-text">спросить в мессенджере</p>
                 </div>
                 <div class="contacts__social">
-                    <a href=""><img src="img/VK.svg" alt="Иконка Вконтакте"></a>
+                    <a href=""><img src="{{asset('img/VK.svg')}}" alt="Иконка Вконтакте"></a>
                     <p class="contacts__social-text">Наша круппа в ВКонтакте</p>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 <input class="popup__form-tel" name="phone" type="tel" placeholder="Телефон" value="{{ old('phone') }}">
                 <div class="b-captcha">
                     <span id="b-captcha__img--free">{!! captcha_img() !!}</span>
-                    <button id="b-captcha__reload" class="b-captcha__reload--free"><img src="img/reload.svg" alt="Обновить"></button>
+                    <button id="b-captcha__reload" class="b-captcha__reload--free"><img src="{{asset('img/reload.svg')}}" alt="Обновить"></button>
                 </div>
                 <input class="popup__form-captcha" name="captcha" type="text">
                 <div class="b-checkbox">
@@ -67,5 +67,5 @@
 @endsection
 @section('ymaps')
     <script src="https://api-maps.yandex.ru/2.1/?apikey=5703c528-fb4a-4c0a-a0b1-23d68ed92a66&lang=ru_RU"></script>
-    <script src="js/ymaps.js"></script>
+    <script src="{{asset('js/ymaps.js')}}"></script>
 @endsection

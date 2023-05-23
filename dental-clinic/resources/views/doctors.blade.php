@@ -15,7 +15,7 @@
                     @foreach($doctors as $doctor)
                         <li class="doctors__preview owl-dot">
                             <figure>
-                                <img class="doctors__preview-img" src="img/doctors/{{$doctor->icon}}" alt="Иконка врача">
+                                <img class="doctors__preview-img" src="{{asset('img/doctors') . '/' . $doctor->icon}}" alt="Иконка врача">
                                 <figcaption>
                                     <p class="doctors__preview-name">
                                         {{$doctor->surname}}
@@ -40,7 +40,7 @@
                         <div class="doctors__slider owl-carousel owl-theme">
                             @foreach($doctors as $doctor)
                                 <div class="doctors__slider-item item" style="width: 100%">
-                                    <img class="doctors__img" src="img/doctors/{{$doctor->image}}"
+                                    <img class="doctors__img" src="{{asset('img/doctors') . '/' . $doctor->image}}"
                                          alt="">
                                     <div class="doctors__info">
                                         <p class="doctors__info-name">
@@ -74,8 +74,8 @@
             <div class="doctors__wrap-messenger">
                 <div class="doctors__messenger">
                     <div class="doctors__messenger-icon">
-                        <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                        <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                        <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                        <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
                     </div>
                     <p class="doctors__messenger-text">спросить в мессенджере</p>
                 </div>
@@ -91,7 +91,7 @@
                             <form class="helpers__form" data-id-department="{{$department->id}}" method="get">
                                 <button class="helpers__list-item helpers__list-item--{{substr($department->image, 0, -4)}}">
                                     <h4 class="helpers__h4">{{$department->name}}</h4>
-                                    <img class="helpers__img" src="img/doctors/helpers/{{$department->icon}}" >
+                                    <img class="helpers__img" src="{{asset('img/doctors/helpers') . '/' . $department->icon}}" >
                                 </button>
                             </form>
                         @endforeach
@@ -109,11 +109,11 @@
 @endsection
 
 @section('slider-css')
-    <link rel="stylesheet" href="owlCarousel/assets/owl.carousel.css">
-    <link rel="stylesheet" href="owlCarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{asset('owlCarousel/assets/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('owlCarousel/assets/owl.theme.default.min.css')}}">
 @endsection
 @section('slider-js')
-    <script src="owlCarousel/owl.carousel.min.js"></script>
+    <script src="{{asset('owlCarousel/owl.carousel.min.js')}}"></script>
 @endsection
 @section('slider-doctor')
     <script>

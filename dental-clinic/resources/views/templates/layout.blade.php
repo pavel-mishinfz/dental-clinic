@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @yield('csrf');
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/fonts.css">
+    @yield('csrf')
+    <link rel="stylesheet" href="{{asset('/css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/fonts.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     @yield('review-css')
     <title>{{$title}}</title>
@@ -19,7 +19,7 @@
 <header class="header">
     <div class="container header__container">
         <div class="logo">
-            <img class="logo__img" src="img/logo.svg" alt="Логотип">
+            <img class="logo__img" src="{{asset('img/logo.svg')}}" alt="Логотип">
             <p class="logo__title">Стоматологическая клиника</p>
         </div>
         <nav class="nav">
@@ -47,7 +47,7 @@
     <div class="container footer__container">
         <div class="footer__left">
             <div class="logo">
-                <img class="logo__img" src="img/logo.svg" alt="Логотип">
+                <img class="logo__img" src="{{asset('img/logo.svg')}}" alt="Логотип">
                 <p class="logo__title">Стоматологическая клиника</p>
             </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="footer__right">
             <address class="address">
                 <div class="address__top">
-                    <img src="img/location.svg" alt="Иконка адреса">
+                    <img src="{{asset('img/location.svg')}}" alt="Иконка адреса">
                     <p class="address__title">Адрес</p>
                 </div>
                 <div class="address__bottom">
@@ -72,7 +72,7 @@
             </address>
             <div class="work-time">
                 <div class="work-time__top">
-                    <img src="img/clock.svg" alt="Иконка часов">
+                    <img src="{{asset('img/clock.svg')}}" alt="Иконка часов">
                     <p class="work-time__title">Время работы</p>
                 </div>
                 <div class="work-time__bottom">
@@ -82,8 +82,8 @@
                 </div>
             </div>
             <div class="social-network">
-                <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
             </div>
             <div class="phone">
                 <a href="tel:+74966141515" class="phone__number">+7 (496) 614-25-25</a>
@@ -129,7 +129,7 @@
                     <input class="popup__form-tel" name="phone" type="tel" placeholder="Телефон" value="{{ old('phone') }}">
                     <div class="b-captcha">
                         <span id="b-captcha__img">{!! captcha_img() !!}</span>
-                        <button id="b-captcha__reload"><img src="img/reload.svg" alt="Обновить"></button>
+                        <button id="b-captcha__reload"><img src="{{asset('img/reload.svg')}}" alt="Обновить"></button>
                     </div>
                     <input class="popup__form-captcha" name="captcha" type="text">
                     <div class="b-checkbox">
@@ -151,28 +151,25 @@
 
 @yield('slider-css')
 
-<script
-    src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-    crossorigin="anonymous"></script>
-<script src="js/inputmask/inputmask.js"></script>
-<script src="js/inputmask/jquery.inputmask.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/inputmask/inputmask.js')}}"></script>
+<script src="{{asset('js/inputmask/jquery.inputmask.js')}}"></script>
 
 @yield('review-js')
 
 @yield('slider-js')
 
 @yield('ymaps')
-<script src="js/hamb-menu.js"></script>
-<script src="js/observer.js"></script>
-<script src="js/popup.js"></script>
+<script src="{{asset('js/hamb-menu.js')}}"></script>
+<script src="{{asset('js/observer.js')}}"></script>
+<script src="{{asset('js/popup.js')}}"></script>
 
 @yield('slider-doctor')
 
 @yield('slider-about')
 
-<script src="js/captcha.js"></script>
-<script src="js/feedback.js"></script>
+<script src="{{asset('js/captcha.js')}}"></script>
+<script src="{{asset('js/feedback.js')}}"></script>
 
 </body>
 

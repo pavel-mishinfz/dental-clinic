@@ -2024,6 +2024,8 @@ textarea:active::placeholder {
 
 .license__img {
     border-radius: 20px;
+    width: 32rem;
+    height: 42rem;
 }
 
 .contacts {
@@ -3723,7 +3725,7 @@ textarea:active::placeholder {
     .popup__form-title {
         font-size: 2rem;
     }
-    
+
     .free {
         background-image: none;
         background-color: #f5f5f5;

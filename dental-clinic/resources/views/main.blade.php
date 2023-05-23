@@ -15,21 +15,21 @@
         <div class="container">
             <div class="features__list">
                 <div class="features__list-item">
-                    <img src="img/main/calendar.svg" alt="Календарь" class="features__img">
+                    <img src="{{asset('img/main/calendar.svg')}}" alt="Календарь" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Работаем с 2011 года</p>
                         <p class="features__text">Многолетний опыт работы - залог качественного сервиса</p>
                     </div>
                 </div>
                 <div class="features__list-item">
-                    <img src="img/main/user.svg" alt="Пользователь" class="features__img">
+                    <img src="{{asset('img/main/user.svg')}}" alt="Пользователь" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Опытные врачи</p>
                         <p class="features__text">Огромный опыт персонала и слаженность работы</p>
                     </div>
                 </div>
                 <div class="features__list-item">
-                    <img src="img/main/fingerprint.svg" alt="Отпечаток пальца" class="features__img">
+                    <img src="{{asset('img/main/fingerprint.svg')}}" alt="Отпечаток пальца" class="features__img">
                     <div class="features__desc">
                         <p class="features__title">Уникальный подход</p>
                         <p class="features__text">Применяем в своей работе современные технологии</p>
@@ -50,7 +50,7 @@
             </div>
             <div class="consultation__list--small-device">
                 <div class="consultation__list-item--small-device">
-                    <div class="consultation__img"><img src="img/consultation/inspection.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/inspection.png')}}" alt="Осмотр"></div>
                     <p class="consultation__text">
                         Полный осмотр и диагностика полости рта
                     </p>
@@ -59,7 +59,7 @@
                     </p>
                 </div>
                 <div class="consultation__list-item--small-device">
-                    <div class="consultation__img"><img src="img/consultation/plane.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/plane.png')}}" alt="Осмотр"></div>
                     <p class="consultation__text">
                         Составит 2-3 плана лечения на выбор
                     </p>
@@ -68,7 +68,7 @@
                     </p>
                 </div>
                 <div class="consultation__list-item--small-device">
-                    <div class="consultation__img"><img src="img/consultation/clean.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/clean.png')}}" alt="Осмотр"></div>
                     <p class="consultation__text">
                         При необходимости проведем проф. гигиену
                     </p>
@@ -82,9 +82,9 @@
             </div>
             <div class="consultation__list">
                 <div class="consultation__list-item consultation__list-item--img">
-                    <div class="consultation__img"><img src="img/consultation/inspection.png" alt="Осмотр"></div>
-                    <div class="consultation__img"><img src="img/consultation/plane.png" alt="Осмотр"></div>
-                    <div class="consultation__img"><img src="img/consultation/clean.png" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/inspection.png')}}" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/plane.png')}}" alt="Осмотр"></div>
+                    <div class="consultation__img"><img src="{{asset('img/consultation/clean.png')}}" alt="Осмотр"></div>
                 </div>
                 <div class="consultation__list-item consultation__list-item--text">
                     <p class="consultation__text">

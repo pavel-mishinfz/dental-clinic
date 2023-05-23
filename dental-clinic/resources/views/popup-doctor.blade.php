@@ -16,7 +16,7 @@
                 <div class="popup__grid popup__grid--doctor">
                     <div class="popup__grid-wrap-item">
                         <div class="popup__grid-item popup__grid-item--left">
-                            <img class="popup__img popup__img--doctor" src="img/doctors/{{$doctor->image}}"
+                            <img class="popup__img popup__img--doctor" src="{{asset('img/doctors') . '/' . $doctor->image}}"
                                  alt="{{$doctor->name}}">
                             <div class="popup__info">
                                 <p class="popup__info-name">
@@ -57,7 +57,7 @@
                                 <input class="popup__form-tel" name="phone" type="tel" placeholder="Телефон">
                                 <div class="b-captcha">
                                     <span id="b-captcha__img">{!! captcha_img() !!}</span>
-                                    <button id="b-captcha__reload"><img src="img/reload.svg" alt="Обновить"></button>
+                                    <button id="b-captcha__reload"><img src="{{asset('img/reload.svg')}}" alt="Обновить"></button>
                                 </div>
                                 <input class="popup__form-captcha" name="captcha" type="text">
                                 <div class="b-checkbox">

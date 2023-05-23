@@ -14,7 +14,7 @@
                         <form class="popup__form-doctor" data-id-doctor="{{$department_doctor->id}}" method="get">
                             <button type="submit" class="popup__grid-wrap-item item--click">
                                 <div class="popup__grid-item">
-                                    <img class="popup__img" src="img/doctors/{{$department_doctor->image}}"
+                                    <img class="popup__img" src="{{asset('img/doctors') . '/' . $department_doctor->image}}"
                                          alt="{{$department_doctor->name}}">
                                     <div class="popup__info">
                                         <p class="popup__info-name">

@@ -3,10 +3,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('review-css')
-    <link rel="stylesheet" href="css/croppie/croppie.css" />
-    <link rel="stylesheet" href="css/arcticmodal/jquery.arcticmodal.css" />
-    <link rel="stylesheet" href="css/arcticmodal/themes/simple.css" />
+    <link rel="stylesheet" href="{{asset('css/croppie/croppie.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/arcticmodal/jquery.arcticmodal.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/arcticmodal/themes/simple.css')}}" />
 @endsection
+@yield('reviews-bootstrap')
 @section('content')
     <section class="reviews">
         <div class="container">
@@ -20,7 +21,7 @@
             @foreach($reviews as $review)
                 <article class="reviews__slider-item item">
                     <div class="reviews__slider-item-content">
-                        <img src="upload/{{$review->img}}" alt="Пользователь" class="reviews__img reviews__img--static">
+                        <img src="{{asset('upload') . '/' . $review->img}}" alt="Пользователь" class="reviews__img reviews__img--static">
                         <div class="reviews__desc">
                             <p class="reviews__desc-name">
                                 {{$review->name}}
@@ -38,7 +39,7 @@
             @endforeach
             <div class="reviews__feedback reviews__feedback--margin">
                 <p class="reviews__feedback-title reviews__feedback-add">Оставить отзыв</p>
-                <a href=""><img src="img/VK.svg" alt="Иконка Вконтакте" class="reviews__feedback-icon"></a>
+                <a href=""><img src="{{asset('img/VK.svg')}}" alt="Иконка Вконтакте" class="reviews__feedback-icon"></a>
             </div>
         </div>
     </section>
@@ -58,10 +59,10 @@
                         <textarea class="popup__form-text" name="review" placeholder="Ваш отзыв" cols="50" rows="10" value="{{ old('review') }}"></textarea>
                         <input class="popup__form-file" name="file" type="file" id="file" accept="image/png, image/jpeg" multiple="false" value="user-photo.png">
                         <label for="file"><strong>Загрузить фото</strong></label>
-                        <img id="user-photo" src="upload/user-photo.png">
+                        <img id="user-photo" src="{{asset('upload/user-photo.png')}}">
                         <div class="b-captcha">
                             <span id="b-captcha__img">{!! captcha_img() !!}</span>
-                            <button id="b-captcha__reload"><img src="img/reload.svg" alt="Обновить"></button>
+                            <button id="b-captcha__reload"><img src="{{asset('img/reload.svg')}}" alt="Обновить"></button>
                         </div>
                         <input class="popup__form-captcha" name="captcha" type="text">
                         <div class="success">
@@ -88,8 +89,8 @@
     </div>
 @endsection
 @section('review-js')
-    <script src="js/croppie/croppie.js"></script>
-    <script src="js/arcticmodal/jquery.arcticmodal.js"></script>
-    <script src="js/image-crop.js"></script>
-    <script src="js/review.js"></script>
+    <script src="{{asset('js/croppie/croppie.js')}}"></script>
+    <script src="{{asset('js/arcticmodal/jquery.arcticmodal.js')}}"></script>
+    <script src="{{asset('js/image-crop.js')}}"></script>
+    <script src="{{asset('js/review.js')}}"></script>
 @endsection

@@ -19,16 +19,17 @@
                         </p>
                         <ul class="card__list">
                             @foreach(explode(', ',$department->services) as $service)
-                            <li class="card__list-item">
-                                {{$service}}
-                            </li>
+                                <li class="card__list-item">
+                                    {{$service}}
+                                </li>
                             @endforeach
                         </ul>
-                        <img class="card__img" src="img/service/{{$department->image}}" alt="Удаление зуба">
+                        <img class="card__img" src="{{asset('img/service') . '/' . $department->image}}"
+                             alt="Удаление зуба">
                         <div class="card__messenger">
                             <div class="card__messenger-icon">
-                                <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                                <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                                <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                                <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
                             </div>
                             <p class="card__messenger-text">спросить в мессенджере</p>
                         </div>
@@ -118,14 +119,16 @@
                     </div>
                     <div class="hygiene__messenger">
                         <div class="hygiene__messenger-icon">
-                            <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                            <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                            <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                            <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
                         </div>
                         <p class="hygiene__messenger-text">спросить в мессенджере</p>
                     </div>
                     <div class="hygiene__btns">
                         <button class="btn btn--hygiene btn--feedback">Записаться</button>
-                        <a href="{{route('doctor.index')}}"><button class="btn btn--hygiene-select">Выбрать врача</button></a>
+                        <a href="{{route('doctor.index')}}">
+                            <button class="btn btn--hygiene-select">Выбрать врача</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -142,12 +145,12 @@
                         <p class="popup--price-list__title">
                             Скачайте прайс-лист и ознакомьтесь с ценами
                         </p>
-                        <img class="popup--price-list__img" src="img/pdf-icon.svg" alt="Иконка pdf">
+                        <img class="popup--price-list__img" src="{{asset('img/pdf-icon.svg')}}" alt="Иконка pdf">
                         <button type="download" class="btn btn--price-list">Скачать</button>
                         <div class="b-messenger">
                             <div class="b-messenger__icon">
-                                <a href=""><img src="img/telegram.svg" alt="Иконка телеграмма"></a>
-                                <a href=""><img src="img/whatsapp.svg" alt="Иконка whatsapp'a"></a>
+                                <a href=""><img src="{{asset('img/telegram.svg')}}" alt="Иконка телеграмма"></a>
+                                <a href=""><img src="{{asset('img/whatsapp.svg')}}" alt="Иконка whatsapp'a"></a>
                             </div>
                             <p class="b-messenger__text">спросить в мессенджере</p>
                         </div>
