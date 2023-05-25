@@ -8,6 +8,9 @@ use App\Models\Patient;
 class EditController extends Controller
 {
     public function __invoke(Patient $patient) {
-        return view('admin.patient.edit', compact('patient'));
+        $title = 'Edit';
+        $route = 'admin.patient.edit';
+
+        return view('admin.patient.edit', compact('patient', 'title', 'route'));
     }
 }

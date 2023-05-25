@@ -1,4 +1,7 @@
 @extends('templates.admin')
+@section('breadcrumbs')
+    {{Breadcrumbs::render($route)}}
+@endsection
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">

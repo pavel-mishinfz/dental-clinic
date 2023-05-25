@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Schema;
 class ShowController extends Controller
 {
     public function __invoke(Review $review) {
+        $title = $review->surname . ' ' . $review->name;
+        $route = 'admin.review.show';
         $columns = Schema::getColumnListing('reviews');
-        return view('admin.review.show', compact('review', 'columns'));
+
+        return view('admin.review.show', compact('review', 'columns', 'title', 'route'));
     }
 }

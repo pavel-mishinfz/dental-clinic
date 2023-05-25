@@ -9,9 +9,11 @@ use Illuminate\Support\Facades\Schema;
 class IndexController extends Controller
 {
     public function __invoke() {
+        $title = 'Reviews';
+        $route = 'admin.review.index';
         $reviews = Review::paginate(50);
         $columns = Schema::getColumnListing('reviews');
 
-        return view('admin.review.index', compact('reviews', 'columns'));
+        return view('admin.review.index', compact('reviews', 'columns', 'title', 'route'));
     }
 }

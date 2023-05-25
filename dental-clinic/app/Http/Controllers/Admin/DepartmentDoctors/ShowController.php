@@ -14,6 +14,10 @@ class ShowController extends Controller
         $columns = Schema::getColumnListing('department_doctors');
         $department = Department::find($departmentDoctor->department_id);
         $doctor = Doctor::find($departmentDoctor->doctor_id);
-        return view('admin.department_doctor.show', compact('departmentDoctor', 'columns', 'department', 'doctor'));
+        $title = $department->name;
+        $route = 'admin.department-doctor.show';
+
+        return view('admin.department_doctor.show', compact('departmentDoctor', 'columns',
+                                                                'department', 'doctor', 'title', 'route'));
     }
 }

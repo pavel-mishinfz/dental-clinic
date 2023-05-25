@@ -14,6 +14,10 @@ class ShowController extends Controller
         $columns = Schema::getColumnListing('form_patients');
         $patient = Patient::find($formPatient->patient_id);
         $doctor = Doctor::find($formPatient->doctor_id);
-        return view('admin.form_patient.show', compact('formPatient', 'columns', 'patient', 'doctor'));
+        $title = $patient->surname . ' ' . $patient->name . ' ' . $patient->lastname;
+        $route = 'admin.form-patient.show';
+
+        return view('admin.form_patient.show', compact('formPatient', 'columns', 'patient',
+                                                            'doctor', 'title', 'route'));
     }
 }

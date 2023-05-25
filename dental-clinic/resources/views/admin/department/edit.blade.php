@@ -1,4 +1,7 @@
 @extends('templates.admin')
+@section('breadcrumbs')
+    {{Breadcrumbs::render($route, $department)}}
+@endsection
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -9,7 +12,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('admin.department.update', $department->id) }}" method="post">
+    <form action="{{ route('admin.department.update', $department->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('patch')
         <div class="mb-3">
@@ -17,12 +20,12 @@
             <input type="text" name="name" class="form-control" id="name" value="{{$department->name}}">
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Image</label>
-            <input type="text" name="image" class="form-control" id="image" value="{{$department->image}}">
+            <label for="image" class="form-label">Image (252x383) <small>для больших размеров изображение будет обрезано</small></label>
+            <input type="file" name="image" class="form-control" id="image" accept="image/png, image/jpeg">
         </div>
         <div class="mb-3">
-            <label for="icon" class="form-label">Icon</label>
-            <input type="text" name="icon" class="form-control" id="icon" value="{{$department->icon}}">
+            <label for="icon" class="form-label">Icon (73x100)</label>
+            <input type="file" name="icon" class="form-control" id="icon" accept="image/svg+xml">
         </div>
         <div class="mb-3">
             <label for="desc" class="form-label">Description</label>

@@ -1,4 +1,7 @@
 @extends('templates.admin')
+@section('breadcrumbs')
+    {{Breadcrumbs::render($route)}}
+@endsection
 @section('csrf')
     <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection

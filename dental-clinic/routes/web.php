@@ -29,8 +29,10 @@ Route::post('/review-send', 'ReviewController@store');
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     Route::get('/', function () {
-        return view('templates.admin');
-    });
+        $title = 'Admin panel';
+        $route = 'admin.index';
+        return view('templates.admin', compact('title', 'route'));
+    })->name('admin.index');
 
     Route::group(['namespace' => 'Department'], function () {
         Route::get('/departments', 'IndexController')->name('admin.department.index');

@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 class CreateController extends Controller
 {
     public function __invoke() {
-        return view('admin.patient.create');
+        $title = 'Create';
+        $route = 'admin.patient.create';
+
+        return view('admin.patient.create', compact('title', 'route'));
     }
 }

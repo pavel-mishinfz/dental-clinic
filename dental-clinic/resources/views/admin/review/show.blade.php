@@ -1,4 +1,7 @@
 @extends('templates.admin')
+@section('breadcrumbs')
+    {{Breadcrumbs::render($route, $review)}}
+@endsection
 @section('content')
     <div class="table-responsive">
         <table class="table">

@@ -8,6 +8,9 @@ use App\Models\Department;
 class EditController extends Controller
 {
     public function __invoke(Department $department) {
-        return view('admin.department.edit', compact('department'));
+        $title = 'Edit';
+        $route = 'admin.department.edit';
+
+        return view('admin.department.edit', compact('department', 'title', 'route'));
     }
 }
