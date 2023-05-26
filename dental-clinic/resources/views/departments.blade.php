@@ -14,9 +14,9 @@
                 @foreach($departments as $department)
                     <article class="card obsv-card">
                         <h4 class="card__h4">{{$department->name}}</h4>
-                        <p class="card__text">
-                            {{$department->description}}
-                        </p>
+                        <div class="card__text">
+                            {!! $department->description !!}
+                        </div>
                         <ul class="card__list">
                             @foreach(explode(', ',$department->services) as $service)
                                 <li class="card__list-item">

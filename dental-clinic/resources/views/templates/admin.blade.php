@@ -252,7 +252,10 @@
 
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+
+@yield('ckeditor')
+
 </body>
 </html>

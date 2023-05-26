@@ -28,7 +28,7 @@
         </div>
         <div class="mb-3">
             <label for="desc" class="form-label">Description</label>
-            <input type="text" name="description" class="form-control" id="desc" value="{{old('description')}}">
+            <textarea name="description" id="description" rows="10" cols="80">{{old('description')}}</textarea>
         </div>
         <div class="mb-3">
             <label for="services" class="form-label">Services</label>
@@ -37,4 +37,9 @@
         <button type="submit" class="btn btn-primary mb-3">Create</button>
         <a href="{{ route('admin.department.index') }}" class="btn btn-dark mb-3">Back</a>
     </form>
+@endsection
+@section('ckeditor')
+    <script>
+        CKEDITOR.replace('description');
+    </script>
 @endsection
