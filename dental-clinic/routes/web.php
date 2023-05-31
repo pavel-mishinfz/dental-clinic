@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Department;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +26,7 @@ Route::get('/reviews', 'ReviewController@index')->name('review.index');
 Route::post('/image-resize', 'ReviewController@imageResize');
 Route::post('/review-send', 'ReviewController@store');
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', function () {
         $title = 'Admin panel';
         $route = 'admin.index';
@@ -102,3 +101,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
     });
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
