@@ -65,7 +65,10 @@
 
 ## Как запустить?
 
-```composer update```
+```
+  composer update
+  php artisan serve
+```
 
 [Скачать](https://github.com/pavel-mishinfz/dental-clinic/blob/assets/dental_clinic.sql) дамп БД 
 
