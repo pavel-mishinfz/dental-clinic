@@ -66,11 +66,15 @@
 ## Как запустить?
 
 ```
-  composer update
-  php artisan serve
+  composer install
+  npm install
 ```
 
+Скопировать и вставить файл .env.example, убрать .example. 
+
 [Скачать](https://github.com/pavel-mishinfz/dental-clinic/blob/assets/dental_clinic.sql) дамп БД 
+
+```php artisan serve```
 
 ## Планы на будущее
 Улучшить функционал админки
